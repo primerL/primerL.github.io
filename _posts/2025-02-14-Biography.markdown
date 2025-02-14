@@ -7,4 +7,4 @@ Hi! I'm Bo Li, a senior undergraduate student from [Software School](https://sof
 
 Education
 ======
-* B.S. in Software School, Fudan University, 2021~now
+* B.S. in Software School, Fudan University, 2021~present
