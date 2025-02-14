@@ -26,9 +26,9 @@ plainwhite:
     # - home
     - page
     - post
-  navigation:
-    - title: CV 
-      url: "/_CV_BoLi.pdf"
+  # navigation:
+  #   - title: CV 
+  #     url: "/_CV_BoLi.pdf"
   # generate social links in footer
   social_links:
     # twitter: samarsault
