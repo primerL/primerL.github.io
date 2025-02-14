@@ -27,7 +27,7 @@ plainwhite:
     - page
     - post
   navigation:
-    - title: *CV* 
+    - title: CV 
       url: "/_CV_BoLi.pdf"
   # generate social links in footer
   social_links:
