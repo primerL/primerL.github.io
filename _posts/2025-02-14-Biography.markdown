@@ -6,7 +6,8 @@ Hi! I'm Bo Li, a senior undergraduate student from [Software School](https://sof
 
 My research interests span across AI alignment, the application of LLMs and VLMs in healthcare, as well as computer vision. I am also very open to exploring other directions（eg. HCI, 3D, embodied intelligence...）. I am eager to engage in research that is closely aligned with real-world applications, and I am particularly interested in exploring how AI research can profoundly reshape the future of scientific inquiry and the broader human society. 
 
-Currently, I am seeking research assistant opportunities in 2025 to further deepen my research interests and expand my scope of research.
+Currently, I am seeking research assistant opportunities in 2025 to further deepen my research interests and expand my scope of research. 
+My CV is available [here](/resume). My pronouns are She/Her.
 
 Education
 ======
