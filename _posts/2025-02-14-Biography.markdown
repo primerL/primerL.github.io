@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: page
 title:  "Biography"
 ---
 Hi! I'm Bo Li, a senior undergraduate student from [Software School](https://software.fudan.edu.cn/main.htm), [Fudan University](https://www.fudan.edu.cn/). 
