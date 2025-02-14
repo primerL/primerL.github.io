@@ -3,7 +3,7 @@ layout: page
 title:  "Biography"
 ---
 
-Biography
+Biography 🎒
 ======
 Hi! I'm Bo Li, a senior undergraduate student from [Software School](https://software.fudan.edu.cn/main.htm), [Fudan University](https://www.fudan.edu.cn/). In 2024 summer, I had the opportunity to work as a research assistant at UNC-Chapel Hill, advised by Prof. [Huaxiu Yao](https://www.huaxiuyao.io/). Prior to that, I served as a research assistant at Fudan University from 2022 to 2024, under the guidance of Prof. [Jingjing Chen](https://fvl.fudan.edu.cn/people/jingjingchen/).
 
@@ -13,6 +13,17 @@ Currently, I am seeking research assistant opportunities in 2025 to further deep
 
 My CV is available [here](/_CV_BoLi.pdf). My pronouns are She/Her/Hers.
 
-Education
+Education 📖
 ======
 * B.S. in Software School, Fudan University, 2021~present
+
+Award 🏆
+======
+* China National Scholarship (The highest honorable national scholarship to Chinese college students). (0.2%) 2022
+* Fudan Scholarship University 2023
+
+Interests 🌟
+======
+* 🎹 Enjoying playing the piano, used to play the guitar 🎸, but it’s been ages since last touching it.
+* 🎮 Game：Genshin Impact, Zenless Zone Zero...
+* 🌍 Hope to have the chance to travel around the world. 
