@@ -2,5 +2,5 @@
 
 source "https://rubygems.org"
 gemspec
-gem install plainwhite
+bundle install
 gem "plainwhite"
