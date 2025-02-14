@@ -11,7 +11,7 @@ My research interests span across AI alignment, the application of LLMs and VLMs
 
 Currently, I am seeking research assistant opportunities in 2025 to further deepen my research interests and expand my scope of research. 
 
-My CV is available [here](/_CV_BoLi.pdf). My pronouns are She/Her.
+My CV is available [here](/_CV_BoLi.pdf). My pronouns are She/Her/Hers.
 
 Education
 ======
