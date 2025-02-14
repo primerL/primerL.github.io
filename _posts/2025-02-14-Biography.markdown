@@ -7,6 +7,4 @@ Hi! I'm Bo Li, a senior undergraduate student from [Software School](https://sof
 
 Education
 ======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+* B.S. in Software School, Fudan University, 2021~now
