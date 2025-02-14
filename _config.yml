@@ -26,10 +26,13 @@ plainwhite:
     - home
     - page
     - post
+  navigation:
+    - title: Resume
+      url: "/resume"
   # generate social links in footer
   social_links:
     # twitter: samarsault
-    # github:  samarsault
+    github:  https://github.com/primerL
     # linkedIn: in/samarsault
     #dribbble: jekyll
     #flickr:   jekyll
