@@ -1,6 +1,6 @@
 ---
 layout: page
-title:  "Biography"
+title:  "Bo Li‘s homepage"
 ---
 
 Biography 🎒
