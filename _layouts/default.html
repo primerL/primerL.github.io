@@ -49,6 +49,12 @@
           </li>
         </a>
         {%- endif -%}
+        {% if site.plainwhite.social_links.googlescholar %}
+  <a href="{{ site.plainwhite.social_links.googlescholar }}">
+    <i class="ai ai-google-scholar"></i>
+  </a>
+{% endif %}
+
         {%- if site.plainwhite.social_links.linkedIn -%}
         <a href="https://www.linkedin.com/{{ site.plainwhite.social_links.linkedIn }}" target="_blank">
           <li>
