@@ -45,6 +45,7 @@ plainwhite:
     #telegram: jekyll
     #gitlab: jekyll
     email: lib21@m.fudan.edu.cn
+    googlescholar:https://scholar.google.com/citations?hl=en&user=X8H6V5IAAAAJ
 
     # Mastodon instances
     # mastodon:
