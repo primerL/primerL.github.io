@@ -31,21 +31,11 @@ plainwhite:
   #   - title: CV 
   #     url: "/_CV_BoLi.pdf"
   # generate social links in footer
-  social_links:
-    # twitter: samarsault
-    github:  primerL
-    # linkedIn: in/samarsault
-    #dribbble: jekyll
-    #flickr:   jekyll
-    #instagram: jekyll
-    #pinterest: jekyll
-    #youtube: jekyll
-    #facebook: jekyll
-    #soundcloud: jekyll
-    #telegram: jekyll
-    #gitlab: jekyll
-    email: lib21@m.fudan.edu.cn
-    googlescholar:https://scholar.google.com/citations?hl=en&user=X8H6V5IAAAAJ
+social_links:
+  github: primerL
+  email: lib21@m.fudan.edu.cn
+  googlescholar: https://scholar.google.com/citations?user=X8H6V5IAAAAJ&hl=en
+
 
     # Mastodon instances
     # mastodon:
