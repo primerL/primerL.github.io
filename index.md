@@ -9,9 +9,7 @@ Hi! I'm Bo Li, an undergraduate student from [Software School](https://software.
 
 Currently, I am a research intern at Princeton University, advised by Prof. [Zhuang Liu](https://liuzhuang13.github.io/).  
 
-My research interests span across AI alignment, the application of LLMs and VLMs, as well as computer vision. I am also very open to exploring other directions（eg. 3D, embodied intelligence...）. I am eager to engage in research that is closely aligned with real-world applications, and I am particularly interested in exploring how AI research can profoundly reshape the future of scientific inquiry and the broader human society. 
-
-Currently, I am seeking research assistant opportunities in 2025 to further deepen my research interests and expand my scope of research. 
+My research interests broadly include (but are not limited to) AI alignment, unified models for multimodal understanding and generation, and benchmarks and evaluation.
 
 My CV is available [here](CV_BoLi.pdf). My pronouns are She/Her/Hers.
 
@@ -22,7 +20,7 @@ Education 📖
 Award 🏆
 ======
 * China National Scholarship (The highest honorable national scholarship to Chinese college students). (0.2%) 2022
-* Fudan Scholarship University 2023
+* Fudan Scholarship University 2023, 2024
 
 Interests 🌟
 ======
