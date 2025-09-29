@@ -4,7 +4,7 @@ title:  "Bo Li‘s homepage"
 ---
 
 Biography 🎒
----
+======
 
 * * *
 
@@ -18,21 +18,26 @@ My CV is available [here](CV_BoLi.pdf). My pronouns are She/Her/Hers.
 
 Education 📖
 ======
----
 
 * * *
 * B.S. in Software School, Fudan University, 2021~present
 
 Award 🏆
 ======
+
+* * *
 * China National Scholarship (The highest honorable national scholarship to Chinese college students). (0.2%) 2022
 * Fudan Scholarship University 2023, 2024
 
 Interests 🌟
 ======
+
+* * *
 * 🎹 Enjoying playing the piano, used to play the guitar 🎸, but it’s been ages since last touching it.
 * 🎮 Game：Genshin Impact, Zenless Zone Zero...
-* 🌍 Hope to have the chance to travel around the world. 
+* 🌍 Hope to have the chance to travel around the world.
+
+* * *
 <script type="text/javascript" id="mapmyvisitors"
 src="//mapmyvisitors.com/map.js?d=baX9pNejoGYXetBWrsY62rkpqQAtxyLoAHL5_EEhv_8&cl=ffffff&w=300">
 </script>
