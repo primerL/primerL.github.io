@@ -49,18 +49,7 @@ Service 🏫
 
 * Reviewer: AAAI 2026(AISI Track),  ICLR 2026
   
-<div class="education-entry">
-        <div class="institution">Computer Architecture (Honors Track)</a></div>
-        <div class="program-date">
-            <span>Teaching Assistant</span>
-            <span>Fall 2023</span>
-        </div>
-        <div class="details">
-            <ul>
-                <li> Responsible for designing course assignments and guiding students in their learning experience  </li>
-            </ul>
-        </div>
-</div>
+* Teaching Assistant: Assistant for Computer Architecture **(Honors Course)**, responsible for designing course assignments and guiding students in their learning experience and academic performance. 
 
 
 
