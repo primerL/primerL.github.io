@@ -28,6 +28,6 @@ Interests 🌟
 * 🎮 Game：Genshin Impact, Zenless Zone Zero...
 * 🌍 Hope to have the chance to travel around the world. 
 <script type="text/javascript" id="mapmyvisitors"
-src="//mapmyvisitors.com/map.js?d=baX9pNejoGYXetBWrsY62rkpqQAtxyLoAHL5_EEhv_8&cl=ffffff&w=200">
+src="//mapmyvisitors.com/map.js?d=baX9pNejoGYXetBWrsY62rkpqQAtxyLoAHL5_EEhv_8&cl=ffffff&w=300">
 </script>
 
