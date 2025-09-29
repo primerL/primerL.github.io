@@ -43,7 +43,17 @@ Award 🏆
 * China National Scholarship (The highest honorable national scholarship to Chinese college students). (0.2%) 2022
 * Fudan Scholarship University 2023, 2024
 
+
+Service 🏫
+---
+
+* Reviewer: AAAI 2026(AISI Track), ICLR 2026
   
+* Computer Architecture （Honors Course）
+  Teaching Assistant
+  responsible for designing course assignments and guiding students in their learning experience
+
+
 
 Interests 🌟
 ---
