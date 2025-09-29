@@ -12,9 +12,18 @@ Previously, I worked as a research assistant at UNC-Chapel Hill (advised by Prof
 
 My research interests include, but are not limited to, AI alignment, unified models for multimodal understanding and generation, and benchmarks and evaluation.
 
-<div class="info-box">
-  I am applying for PhD programs (Fall 2026). If you'd like to discuss further, feel free to reach out via email.
+<div style="
+  border-left: 4px solid #2a9d8f;
+  background: #f0fdfa;
+  padding: 0.75em 1em;
+  margin: 1em 0;
+  border-radius: 4px;
+  font-size: 0.95em;
+">
+  💡 I am applying for PhD programs (Fall 2026).  
+  If you'd like to discuss further, feel free to reach out via email.
 </div>
+
 
 
 My CV is available [here](CV_BoLi.pdf). My pronouns are She/Her/Hers.
