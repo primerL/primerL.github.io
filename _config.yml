@@ -61,9 +61,12 @@ plainwhite:
 
 # Build settings
 # theme: plainwhite
+markdown: kramdown
 
 plugins:
   - jekyll-seo-tag
   - jekyll-spaceship
+  - jekyll-admonitions
+  - kramdown-parser-gfm
 
 #  - jekyll-feed
