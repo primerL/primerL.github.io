@@ -32,11 +32,11 @@ My CV is available [here](CV_BoLi.pdf). My pronouns are She/Her/Hers.
 Research 🔍
 ---
 
-<div style="display:flex; align-items:center; gap:20px; background:#f8f9fa; padding:20px; border-radius:10px;">
+<div style="display:flex; align-items:center; gap:20px; padding:20px; border-radius:10px;">
   <div style="flex:0 0 220px;">
     <img src="https://github.com/user-attachments/assets/f66379a8-c571-4cba-8e9b-78d158ecd26c"
          alt="ueval"
-         style="width:150%; border-radius:8px;">
+         style="width:200%; border-radius:8px;">
   </div>
 
   <div style="flex:1;">
