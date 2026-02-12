@@ -36,7 +36,7 @@ Research 🔍
   <div style="flex:0 0 220px;">
     <img src="https://github.com/user-attachments/assets/f66379a8-c571-4cba-8e9b-78d158ecd26c"
          alt="ueval"
-         style="width:100%; border-radius:8px;">
+         style="width:150%; border-radius:8px;">
   </div>
 
   <div style="flex:1;">
