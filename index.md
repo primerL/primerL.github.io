@@ -53,12 +53,6 @@ Research 🔍
   </div>
 </div>
 
-          
-Education 📖
----
-
-* B.S. in Software School, Fudan University, 2021~present
-
 
 
 Award 🏆
