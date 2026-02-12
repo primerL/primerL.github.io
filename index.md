@@ -36,12 +36,12 @@ Research 🔍
   <div style="flex:0 0 220px;">
     <img src="https://github.com/user-attachments/assets/f66379a8-c571-4cba-8e9b-78d158ecd26c"
          alt="ueval"
-         style="width:40%; border-radius:8px;">
+         style="width:100%; border-radius:8px;">
   </div>
 
   <div style="flex:1;">
     <h5 style="margin-top:0;">UEval: A Benchmark for Unified Multimodal Generation</h5>
-    <p>Bo Li, Yida Yin, Wenhao Chai, <u>Xingyu Fu</u>*, Zhuang Liu*</p>
+    <p><u>Bo Li</u>, Yida Yin, Wenhao Chai, Xingyu Fu*, Zhuang Liu*</p>
     <p>Arxiv 2026 Jan</p>
     <p>
       <a href="https://arxiv.org/pdf/2601.22155">[paper]</a>
