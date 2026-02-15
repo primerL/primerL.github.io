@@ -66,7 +66,7 @@ Research 🔍
     <p>Yiyang Zhou*, Zhaoyang Wang*, Tianle Wang*, Shangyu Xing†, Peng Xia†, <u>Bo Li†</u>,
 Kaiyuan Zheng†, Zijian Zhang†, Zhaorun Chen, Wenhao Zheng, Xuchao Zhang,
 Chetan Bansal, Weitong Zhang, Ying Wei, Mohit Bansal, Huaxiu Yao</p>
-    <p>ICLR 2026</p>
+    <p>ICLR 2025</p>
     <p>
       <a href="https://arxiv.org/pdf/2504.19276">[paper]</a>
     </p>
