@@ -54,6 +54,26 @@ Research 🔍
 </div>
 
 
+<div style="display:flex; align-items:center; gap:20px; padding:20px; border-radius:10px;">
+  <div style="flex:0 0 320px;">
+    <img src="https://github.com/user-attachments/assets/0d94c976-3472-4486-93cd-221fb57a6355"
+         alt="anyprefer"
+         style="width:100%; border-radius:8px;">
+  </div>
+
+  <div style="flex:1;">
+    <h5 style="margin-top:0;">Anyprefer: An Agentic Framework For Preference Data Synthesis</h5>
+    <p>Yiyang Zhou*, Zhaoyang Wang*, Tianle Wang*, Shangyu Xing†, Peng Xia†, <u>Bo Li†</u>,
+Kaiyuan Zheng†, Zijian Zhang†, Zhaorun Chen, Wenhao Zheng, Xuchao Zhang,
+Chetan Bansal, Weitong Zhang, Ying Wei, Mohit Bansal, Huaxiu Yao</p>
+    <p>ICLR 2026</p>
+    <p>
+      <a href="https://arxiv.org/pdf/2504.19276">[paper]</a>
+    </p>
+  </div>
+</div>
+
+
 
 Award 🏆
 ---
