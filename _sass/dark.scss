@@ -115,3 +115,63 @@
 		background-color: #0d0d0d;
 	}
 }
+
+// ── Dark mode: sidebar ────────────────────────────────────────────────────────
+.dark main .about {
+	background: #100e0b;
+
+	h2 a { color: #f7f0e3; }
+	p { color: #6b6560; }
+}
+
+.dark .about .social a li i {
+	color: #a07840;
+}
+
+// ── Dark mode: section headings ───────────────────────────────────────────────
+.dark .post h2 {
+	color: #f7f0e3;
+
+	&::after {
+		background: #c97d2a;
+	}
+}
+
+// ── Dark mode: info box ───────────────────────────────────────────────────────
+.dark .info-box {
+	background: #1c1408;
+	border-color: #c97d2a;
+	color: #fed7aa;
+}
+
+// ── Dark mode: pub cards ──────────────────────────────────────────────────────
+.dark .pub-card {
+	background: #1c1917;
+	border-color: #2a2520;
+	border-left-color: #c97d2a;
+
+	&:hover {
+		box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+		border-left-color: #e09030;
+	}
+
+	.pub-info h5 { color: #f7f0e3; }
+
+	.pub-info .pub-authors { color: #a8a29e; }
+
+	.venue-tag {
+		background: #2c1a08;
+		color: #fbbf6a;
+	}
+
+	.pub-links a {
+		border-color: #3c3530;
+		color: #c4bdb5;
+
+		&:hover {
+			border-color: #c97d2a;
+			color: #c97d2a;
+			background: #2c1a08;
+		}
+	}
+}
