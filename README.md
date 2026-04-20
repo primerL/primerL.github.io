@@ -1,2 +1,2 @@
-# zeyofu.github.io
-This is a repo for Xingyu Fu's personal website.
+# primerL.github.io
+This is a repo for Bo Li's personal website.
