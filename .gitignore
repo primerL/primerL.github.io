@@ -1,0 +1,11 @@
+_site/
+.idea
+.git
+.DS_Store
+AGENTS.md
+CLAUDE.md
+index.html.bak
+asset/image/.DS_Store
+asset/image/dataprophet.pdf
+asset/pdfs/Ph_D__Dissertation.pdf
+asset/pdfs/XingyuFu_CV.pdf
