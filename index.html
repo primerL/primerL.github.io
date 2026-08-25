@@ -37,970 +37,120 @@
 			--content-width: 1180px;
 		}
 
-		* {
-			box-sizing: border-box;
-		}
-
-		html {
-			scroll-behavior: smooth;
-		}
-
-		body {
-			margin: 0;
-			font-family: "Manrope", sans-serif;
-			color: var(--ink);
-			line-height: 1.75;
-			background: #ffffff;
-			-webkit-font-smoothing: antialiased;
-		}
-
-		body::before {
-			content: none;
-		}
-
-		body::after {
-			content: none;
-		}
-
-		img {
-			max-width: 100%;
-			display: block;
-		}
-
-		a {
-			color: var(--accent-deep);
-			text-decoration: none;
-		}
-
-		a:hover {
-			color: var(--accent);
-			text-decoration: none;
-		}
-
-		main p a:not(.hero-button):not(.ghost),
-		main li a:not(.hero-button):not(.ghost) {
-			color: var(--link);
-			font-weight: 700;
-			text-decoration-line: underline;
-			text-decoration-thickness: 0.09em;
-			text-underline-offset: 0.18em;
-			text-decoration-color: rgba(45, 110, 134, 0.35);
-			transition: color 0.2s ease, text-decoration-color 0.2s ease, background-size 0.2s ease;
-		}
-
-		main p a:not(.hero-button):not(.ghost):hover,
-		main li a:not(.hero-button):not(.ghost):hover {
-			color: var(--link-hover);
-			text-decoration-color: rgba(139, 79, 42, 0.42);
-		}
-
-		.topbar {
-			position: sticky;
-			top: 0;
-			z-index: 20;
-			isolation: isolate;
-			background: rgba(255, 255, 255, 0.92);
-			backdrop-filter: blur(16px);
-			-webkit-backdrop-filter: blur(16px);
-			border-bottom: 1px solid rgba(74, 54, 41, 0.08);
-			box-shadow: 0 8px 24px rgba(31, 24, 19, 0.06);
-		}
-
-		.topbar::before {
-			content: "";
-			position: absolute;
-			inset: 0;
-			z-index: -1;
-			pointer-events: none;
-			background:
-				radial-gradient(circle at 7% 45%, rgba(236, 202, 139, 0.2), transparent 16%),
-				radial-gradient(circle at 88% 20%, rgba(189, 201, 240, 0.18), transparent 18%),
-				radial-gradient(circle at 72% 78%, rgba(197, 224, 184, 0.14), transparent 16%);
-		}
-
-		.topbar::after {
-			content: "";
-			position: absolute;
-			left: 0;
-			right: 0;
-			bottom: -1px;
-			height: 2px;
-			background: linear-gradient(90deg, rgba(198, 150, 73, 0.18), rgba(166, 176, 226, 0.16), rgba(90, 107, 87, 0.14), rgba(233, 188, 197, 0.16));
-		}
-
-		.topbar-inner {
-			max-width: var(--content-width);
-			margin: 0 auto;
-			padding: 0.95rem 1.4rem;
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-			gap: 1rem;
-		}
-
-		.brand {
-			display: inline-flex;
-			align-items: center;
-			gap: 0.85rem;
-			padding: 0.35rem 0.9rem 0.35rem 0.35rem;
-			border-radius: 999px;
-			background: linear-gradient(135deg, rgba(255, 249, 241, 0.96), rgba(255, 255, 255, 0.92));
-			border: 1px solid rgba(148, 90, 50, 0.08);
-			box-shadow: 0 10px 22px rgba(31, 24, 19, 0.05);
-			color: var(--ink);
-			font-weight: 700;
-			letter-spacing: 0.04em;
-			text-transform: uppercase;
-			font-size: 0.8rem;
-		}
-
-		.brand-mark {
-			width: 2.4rem;
-			height: 2.4rem;
-			border-radius: 50%;
-			display: inline-flex;
-			align-items: center;
-			justify-content: center;
-			background:
-				radial-gradient(circle at 35% 30%, rgba(255, 240, 216, 0.95), rgba(255, 240, 216, 0.35) 35%, transparent 36%),
-				linear-gradient(145deg, #6d7d67, #91582f 62%, #c59649);
-			box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25), var(--shadow-soft);
-			color: #fff5ea;
-			font-family: "Cormorant Garamond", serif;
-			font-size: 1.1rem;
-			font-weight: 700;
-		}
-
-		.nav-toggle {
-			display: none;
-			border: 0;
-			background: transparent;
-			color: var(--ink);
-			font-size: 1.3rem;
-			padding: 0.2rem 0.4rem;
-		}
-
-		.nav-links {
-			display: flex;
-			align-items: center;
-			gap: 0.4rem;
-			list-style: none;
-			margin: 0;
-			padding: 0.35rem 0.45rem;
-			border-radius: 999px;
-			background: linear-gradient(180deg, rgba(255, 253, 249, 0.96), rgba(250, 247, 242, 0.88));
-			border: 1px solid rgba(148, 90, 50, 0.08);
-			box-shadow: 0 10px 26px rgba(31, 24, 19, 0.05);
-		}
-
-		.nav-links a {
-			display: inline-flex;
-			align-items: center;
-			padding: 0.55rem 0.9rem;
-			border-radius: 999px;
-			color: var(--ink-soft);
-			font-size: 0.92rem;
-			font-weight: 600;
-			transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
-		}
-
-		.nav-links a:hover,
-		.nav-links a.active {
-			background: linear-gradient(135deg, rgba(198, 150, 73, 0.18), rgba(233, 188, 197, 0.12), rgba(188, 214, 165, 0.12));
-			color: var(--accent-deep);
-			box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.55);
-			transform: translateY(-1px);
-		}
-
-		main {
-			max-width: var(--content-width);
-			margin: 0 auto;
-			padding: 1.2rem 1.4rem 4.5rem;
-		}
-
-		.hero {
-			position: relative;
-			display: grid;
-			grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.85fr);
-			gap: 2.4rem;
-			align-items: center;
-			padding: 3rem 0 1.4rem;
-			overflow: hidden;
-		}
-
-		.hero::before {
-			content: "";
-			position: absolute;
-			left: -2rem;
-			right: -2rem;
-			top: 1rem;
-			bottom: 0;
-			z-index: -1;
-			border-radius: 64px;
-			background:
-				linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(252, 249, 245, 0.96)),
-				radial-gradient(circle at 16% 18%, rgba(217, 171, 98, 0.1), transparent 24%),
-				radial-gradient(circle at 78% 24%, rgba(181, 193, 245, 0.1), transparent 22%);
-			box-shadow: 0 18px 40px rgba(31, 24, 19, 0.08);
-		}
-
-		.hero-copy {
-			padding: 1.2rem 0.6rem 1.2rem 2.6rem;
-			position: relative;
-			z-index: 1;
-		}
-
-		.kicker {
-			display: inline-flex;
-			align-items: center;
-			gap: 0.6rem;
-			padding: 0.38rem 0.85rem;
-			border-radius: 999px;
-			background: rgba(90, 107, 87, 0.1);
-			color: var(--forest);
-			font-size: 0.82rem;
-			font-weight: 700;
-			letter-spacing: 0.08em;
-			text-transform: uppercase;
-		}
-
-		.hero-copy h1 {
-			margin: 1.2rem 0 0.6rem;
-			font-family: "Cormorant Garamond", serif;
-			font-size: clamp(3rem, 6vw, 5rem);
-			line-height: 0.95;
-			letter-spacing: -0.04em;
-			font-weight: 600;
-		}
-
-		.hero-copy h1 span {
-			display: block;
-			margin-top: 0.55rem;
-			font-size: clamp(1.2rem, 2vw, 1.7rem);
-			font-weight: 500;
-			letter-spacing: 0.03em;
-			color: var(--ink-soft);
-		}
-
-		.hero-role {
-			margin: 0;
-			font-size: 1.08rem;
-			font-weight: 600;
-			color: var(--accent-deep);
-		}
-
-		.hero-lead {
-			max-width: 52rem;
-			margin: 1.2rem 0 1.5rem;
-			font-size: 1rem;
-			color: var(--ink-soft);
-		}
-
-		.hero-actions {
-			display: flex;
-			flex-wrap: wrap;
-			gap: 0.75rem;
-			margin-bottom: 1.2rem;
-		}
-
-		.hero-panel-actions {
-			margin-top: 1.1rem;
-			margin-bottom: 0;
-			flex-direction: column;
-			align-items: stretch;
-			max-width: 290px;
-			margin-left: auto;
-			margin-right: auto;
-		}
-
-		.hero-panel-actions .hero-button,
-		.hero-panel-actions .hero-button.ghost {
-			justify-content: center;
-			width: 100%;
-		}
-
-		.hero-callout {
-			display: grid;
-			grid-template-columns: auto minmax(0, 1fr);
-			align-items: start;
-			gap: 0.85rem;
-			margin: 0 0 1.2rem;
-			padding: 0.95rem 1.05rem;
-			border-radius: 20px;
-			background:
-				linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(252, 249, 245, 0.95));
-			border: 1px solid rgba(74, 54, 41, 0.08);
-			box-shadow: 0 10px 24px rgba(31, 24, 19, 0.05);
-			max-width: 46rem;
-		}
-
-		.hero-callout-badge {
-			display: inline-flex;
-			align-items: center;
-			gap: 0.45rem;
-			padding: 0.42rem 0.72rem;
-			border-radius: 999px;
-			background: rgba(148, 90, 50, 0.1);
-			color: var(--accent-deep);
-			font-size: 0.75rem;
-			font-weight: 800;
-			letter-spacing: 0.06em;
-			text-transform: uppercase;
-			white-space: nowrap;
-		}
-
-		.hero-callout-copy {
-			padding-top: 0.05rem;
-			font-size: 0.93rem;
-			line-height: 1.65;
-			color: var(--ink-soft);
-		}
-
-		.hero-callout-copy strong {
-			color: var(--ink);
-			font-weight: 800;
-		}
-
-		.hero-support {
-			margin: 0 0 1.35rem;
-			max-width: 46rem;
-			padding: 0.95rem 1.05rem 1rem;
-			border-radius: 18px;
-			background:
-				linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(252, 249, 245, 0.95));
-			border: 1px solid rgba(74, 54, 41, 0.08);
-			box-shadow: inset 4px 0 0 rgba(90, 107, 87, 0.18), 0 10px 24px rgba(31, 24, 19, 0.04);
-		}
-
-		.hero-support-title {
-			display: inline-flex;
-			align-items: center;
-			gap: 0.45rem;
-			margin-bottom: 0.38rem;
-			font-size: 0.8rem;
-			font-weight: 800;
-			letter-spacing: 0.08em;
-			text-transform: uppercase;
-			color: var(--forest);
-		}
-
-		.hero-support strong {
-			display: block;
-			margin-bottom: 0.34rem;
-			font-size: 0.96rem;
-			color: var(--ink);
-		}
-
-		.hero-support p {
-			margin: 0;
-			font-size: 0.91rem;
-			line-height: 1.7;
-			color: var(--ink-soft);
-		}
-
-		.hero-button,
-		.hero-button.ghost {
-			display: inline-flex;
-			align-items: center;
-			gap: 0.55rem;
-			padding: 0.78rem 1.15rem;
-			border-radius: 999px;
-			font-size: 0.92rem;
-			font-weight: 700;
-			transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
-		}
-
-		.hero-button {
-			background: linear-gradient(135deg, var(--accent) 0%, var(--accent-deep) 100%);
-			color: #fff7ed;
-			box-shadow: 0 12px 20px rgba(111, 63, 35, 0.18);
-		}
-
-		.hero-button:hover {
-			color: #fff7ed;
-			transform: translateY(-1px);
-			box-shadow: 0 16px 24px rgba(111, 63, 35, 0.22);
-		}
-
-		.hero-button.ghost {
-			background: rgba(255, 255, 255, 0.96);
-			border: 1px solid rgba(74, 54, 41, 0.12);
-			color: var(--ink);
-		}
-
-		.hero-button.ghost:hover {
-			transform: translateY(-1px);
-			background: #ffffff;
-		}
-
-		.hero-panel {
-			position: relative;
-			padding: 0.6rem 0.6rem 0.8rem;
-			max-width: 330px;
-			margin-left: auto;
-			margin-right: auto;
-			z-index: 1;
-		}
-
-		.hero-panel::before,
-		.hero-panel::after {
-			content: none;
-		}
-
-		.paint-card {
-			position: relative;
-			padding: 0.62rem;
-			border-radius: 20px;
-			background:
-				linear-gradient(160deg, rgba(255, 255, 255, 0.96), rgba(252, 248, 242, 0.9)),
-				linear-gradient(145deg, rgba(148, 90, 50, 0.1), rgba(90, 107, 87, 0.14)),
-				radial-gradient(circle at 78% 18%, rgba(166, 176, 226, 0.2), transparent 26%),
-				radial-gradient(circle at 18% 84%, rgba(233, 188, 197, 0.16), transparent 24%);
-			border: 1px solid rgba(74, 54, 41, 0.1);
-			box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.45), 0 16px 34px rgba(31, 24, 19, 0.08);
-		}
-
-		.paint-surface {
-			aspect-ratio: 0.95 / 1;
-			border-radius: 16px;
-			position: relative;
-			overflow: hidden;
-			background:
-				radial-gradient(circle at 28% 24%, rgba(255, 248, 235, 0.96), transparent 17%),
-				radial-gradient(circle at 74% 22%, rgba(198, 204, 236, 0.22), transparent 22%),
-				radial-gradient(circle at 68% 34%, rgba(247, 225, 231, 0.18), transparent 16%),
-				radial-gradient(circle at 72% 32%, rgba(123, 149, 130, 0.22), transparent 20%),
-				radial-gradient(circle at 40% 78%, rgba(181, 140, 108, 0.16), transparent 23%),
-				linear-gradient(145deg, #c8b39a 0%, #dbc4aa 18%, #efe1cf 48%, #d5d9ea 72%, #b4c3b5 100%);
-			box-shadow: 0 22px 34px rgba(49, 31, 20, 0.18);
-		}
-
-		.paint-surface::before {
-			content: "";
-			position: absolute;
-			inset: 0.62rem;
-			border-radius: 16px;
-			background:
-				repeating-linear-gradient(115deg, rgba(255, 255, 255, 0.04) 0 7px, rgba(0, 0, 0, 0.04) 7px 14px),
-				repeating-linear-gradient(20deg, rgba(255, 255, 255, 0.03) 0 10px, rgba(255, 255, 255, 0) 10px 22px);
-			mix-blend-mode: soft-light;
-			pointer-events: none;
-		}
-
-		.paint-surface img {
-			position: absolute;
-			inset: 0;
-			width: 100%;
-			height: 100%;
-			object-fit: contain;
-			object-position: center center;
-			transform: scale(0.76);
-			filter: saturate(0.96) contrast(1.02);
-		}
-
-		.paint-note {
-			margin-top: 0.5rem;
-			padding-left: 0.3rem;
-			font-family: "Cormorant Garamond", serif;
-			font-size: 0.84rem;
-			font-style: italic;
-			color: var(--ink-soft);
-			text-align: center;
-		}
-
-		.section-shell {
-			position: relative;
-			margin-top: 2.2rem;
-			padding: 2.1rem;
-			border-radius: var(--radius-lg);
-			background:
-				linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(252, 249, 245, 0.96));
-			border: 1px solid rgba(74, 54, 41, 0.1);
-			box-shadow: 0 14px 34px rgba(31, 24, 19, 0.06);
-			overflow: hidden;
-		}
-
-		.section-shell::before {
-			content: "";
-			position: absolute;
-			top: 1.3rem;
-			right: 1.6rem;
-			width: 110px;
-			height: 18px;
-			border-radius: 999px;
-			background: linear-gradient(90deg, rgba(148, 90, 50, 0.12), rgba(198, 150, 73, 0.18), rgba(166, 176, 226, 0.16), rgba(90, 107, 87, 0.1));
-			opacity: 0.8;
-		}
-
-		.section-heading {
-			display: flex;
-			flex-wrap: wrap;
-			align-items: baseline;
-			justify-content: space-between;
-			gap: 0.8rem;
-			margin-bottom: 1.3rem;
-		}
-
-		.section-heading h2 {
-			margin: 0;
-			font-family: "Cormorant Garamond", serif;
-			font-size: clamp(2rem, 3vw, 2.8rem);
-			font-weight: 600;
-			letter-spacing: -0.03em;
-		}
-
-		.section-heading p {
-			margin: 0;
-			color: var(--ink-soft);
-			font-size: 0.95rem;
-		}
-
-		.bio-grid {
-			display: grid;
-			grid-template-columns: minmax(0, 1.45fr) minmax(260px, 0.9fr);
-			gap: 1.5rem;
-		}
-
-		.bio-copy p {
-			margin: 0 0 1rem;
-			color: var(--ink-soft);
-			font-size: 0.98rem;
-		}
-
-		.note-stack {
-			display: grid;
-			gap: 0.95rem;
-		}
-
-		.note-card {
-			padding: 1.1rem 1.15rem;
-			border-radius: var(--radius-md);
-			background:
-				linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(252, 249, 245, 0.95));
-			border: 1px solid rgba(74, 54, 41, 0.1);
-			box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.45);
-		}
-
-		.note-card .label {
-			display: block;
-			margin-bottom: 0.35rem;
-			font-size: 0.75rem;
-			font-weight: 800;
-			letter-spacing: 0.08em;
-			text-transform: uppercase;
-			color: var(--forest);
-		}
-
-		.note-card strong {
-			display: block;
-			font-size: 1rem;
-			margin-bottom: 0.25rem;
-		}
-
-		.note-card span {
-			color: var(--ink-soft);
-			font-size: 0.92rem;
-		}
-
-		.callout {
-			padding: 1rem 1.1rem;
-			border-radius: 18px;
-			background: linear-gradient(135deg, rgba(148, 90, 50, 0.12), rgba(198, 150, 73, 0.12));
-			border: 1px solid rgba(148, 90, 50, 0.12);
-			color: var(--accent-deep);
-			font-size: 0.94rem;
-			font-weight: 700;
-		}
-
-		.research-grid {
-			display: grid;
-			grid-template-columns: repeat(2, minmax(0, 1fr));
-			gap: 1.2rem;
-		}
-
-		.paper-card {
-			position: relative;
-			display: flex;
-			flex-direction: column;
-			height: 100%;
-			padding: 1rem;
-			border-radius: 26px;
-			background:
-				linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(252, 249, 245, 0.96)),
-				linear-gradient(160deg, rgba(148, 90, 50, 0.08), rgba(90, 107, 87, 0.1)),
-				radial-gradient(circle at 84% 16%, rgba(166, 176, 226, 0.12), transparent 24%),
-				radial-gradient(circle at 14% 86%, rgba(233, 188, 197, 0.08), transparent 20%);
-			border: 1px solid rgba(74, 54, 41, 0.1);
-			box-shadow: var(--shadow-soft);
-			transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
-		}
-
-		.paper-card:hover {
-			transform: translateY(-4px) rotate(-0.15deg);
-			box-shadow: 0 20px 36px rgba(58, 38, 24, 0.16);
-			border-color: rgba(111, 63, 35, 0.18);
-		}
-
-		.paper-thumb {
-			overflow: hidden;
-			border-radius: 18px;
-			margin-bottom: 1rem;
-			border: 1px solid rgba(74, 54, 41, 0.08);
-			background: rgba(234, 217, 187, 0.45);
-		}
-
-		.paper-thumb img {
-			width: 100%;
-			aspect-ratio: 16 / 9;
-			max-height: 200px;
-			object-fit: contain;
-			background: rgba(255, 248, 236, 0.88);
-			transition: transform 0.35s ease;
-		}
-
-		.paper-card:hover .paper-thumb img {
-			transform: scale(1.03);
-		}
-
-		.paper-card h3 {
-			margin: 0 0 0.55rem;
-			font-size: 1.04rem;
-			line-height: 1.45;
-			font-weight: 800;
-		}
-
-		.paper-authors,
-		.paper-venue {
-			margin: 0;
-			font-size: 0.88rem;
-			color: var(--ink-soft);
-		}
-
-		.paper-authors {
-			margin-bottom: 0.45rem;
-		}
-
-		.paper-authors .me {
-			color: var(--ink);
-			font-weight: 800;
-		}
-
-		.paper-venue {
-			margin-bottom: 0.9rem;
-			font-weight: 700;
-			color: var(--accent-deep);
-		}
-
-		.paper-links {
-			display: flex;
-			flex-wrap: wrap;
-			gap: 0.45rem;
-			margin-top: auto;
-		}
-
-		.paper-links a {
-			display: inline-flex;
-			align-items: center;
-			gap: 0.4rem;
-			padding: 0.42rem 0.7rem;
-			border-radius: 999px;
-			background: rgba(148, 90, 50, 0.09);
-			color: var(--accent-deep);
-			font-size: 0.78rem;
-			font-weight: 800;
-			letter-spacing: 0.02em;
-		}
-
-		.paper-links a:hover {
-			background: rgba(148, 90, 50, 0.18);
-		}
-
-		.split-grid {
-			display: grid;
-			grid-template-columns: 1fr 1fr;
-			gap: 1.2rem;
-		}
-
-		.news-list {
-			list-style: none;
-			padding: 0;
-			margin: 0;
-			display: grid;
-			gap: 0.85rem;
-		}
-
-		.news-list li {
-			padding: 0.95rem 1.05rem;
-			border-radius: var(--radius-md);
-			background:
-				linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(252, 249, 245, 0.95));
-			border: 1px solid rgba(74, 54, 41, 0.08);
-			font-size: 0.94rem;
-			color: var(--ink-soft);
-		}
-
-		.news-list .news-date {
-			font-weight: 800;
-			color: var(--accent-deep);
-		}
-
-		.timeline-card {
-			padding: 1.2rem;
-			border-radius: var(--radius-md);
-			background:
-				linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(252, 249, 245, 0.95));
-			border: 1px solid rgba(74, 54, 41, 0.08);
-		}
-
-		.timeline-card h3 {
-			margin: 0 0 1rem;
-			font-family: "Cormorant Garamond", serif;
-			font-size: 1.65rem;
-			font-weight: 600;
-		}
-
-		.timeline-list {
-			list-style: none;
-			padding: 0;
-			margin: 0;
-			display: grid;
-			gap: 0.8rem;
-		}
-
-		.timeline-list li {
-			display: grid;
-			grid-template-columns: 110px minmax(0, 1fr);
-			gap: 0.85rem;
-		}
-
-		.timeline-date {
-			font-size: 0.82rem;
-			font-weight: 800;
-			letter-spacing: 0.06em;
-			text-transform: uppercase;
-			color: var(--accent-deep);
-		}
-
-		.timeline-copy {
-			font-size: 0.92rem;
-			color: var(--ink-soft);
-		}
-
-		.interest-list {
-			display: grid;
-			grid-template-columns: repeat(3, minmax(0, 1fr));
-			gap: 1rem;
-		}
-
-		.interest-card {
-			padding: 1.1rem;
-			border-radius: var(--radius-md);
-			background:
-				linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(252, 249, 245, 0.95));
-			border: 1px solid rgba(74, 54, 41, 0.08);
-		}
-
-		.interest-card h3 {
-			margin: 0 0 0.5rem;
-			font-size: 1rem;
-			font-weight: 800;
-		}
-
-		.interest-card p {
-			margin: 0;
-			font-size: 0.92rem;
-			color: var(--ink-soft);
-		}
-
-		.footer {
-			padding: 3rem 0 1rem;
-			text-align: center;
-			color: var(--ink-soft);
-		}
-
-		.footer-name {
-			display: inline-block;
-			padding: 0.35rem 0.8rem;
-			border-radius: 999px;
-			background: rgba(255, 251, 242, 0.72);
-			border: 1px solid rgba(74, 54, 41, 0.08);
-			font-size: 0.86rem;
-			font-weight: 700;
-			letter-spacing: 0.05em;
-			text-transform: uppercase;
-			color: var(--forest);
-			margin-bottom: 0.75rem;
-		}
-
-		.footer p {
-			margin: 0.2rem 0;
-			font-size: 0.9rem;
-		}
-
-		.visitor-card {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			gap: 0.6rem;
-			margin: 2.2rem auto 0;
-			padding: 1rem 1.1rem 0.85rem;
-			border-radius: 22px;
-			background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(252, 249, 245, 0.96));
-			border: 1px solid rgba(74, 54, 41, 0.08);
-			box-shadow: 0 12px 28px rgba(31, 24, 19, 0.05);
-			max-width: 420px;
-		}
-
-		.visitor-label {
-			font-size: 0.76rem;
-			font-weight: 800;
-			letter-spacing: 0.1em;
-			text-transform: uppercase;
-			color: var(--forest);
-		}
-
-		.visitor-map {
-			min-height: 170px;
-		}
-
-		.reveal {
-			opacity: 0;
-			transform: translateY(24px);
-			transition: opacity 0.7s ease, transform 0.7s ease;
-		}
-
-		.reveal.visible {
-			opacity: 1;
-			transform: translateY(0);
-		}
-
-		@media (prefers-reduced-motion: reduce) {
-			html {
-				scroll-behavior: auto;
-			}
-
-			*,
-			*::before,
-			*::after {
-				animation: none !important;
-				transition: none !important;
-			}
-
-			.reveal {
-				opacity: 1;
-				transform: none;
-			}
-		}
-
-		@media (max-width: 980px) {
-			.hero,
-			.bio-grid,
-			.research-grid,
-			.split-grid,
-			.interest-list {
-				grid-template-columns: 1fr;
-			}
-
-			.hero-copy {
-				padding: 0.4rem 0 0;
-			}
-		}
-
-		@media (max-width: 760px) {
-			.topbar-inner {
-				padding: 0.85rem 1rem;
-			}
-
-			.nav-toggle {
-				display: inline-flex;
-			}
-
-			.nav-links {
-				position: absolute;
-				top: calc(100% + 0.4rem);
-				left: 1rem;
-				right: 1rem;
-				display: none;
-				flex-direction: column;
-				align-items: stretch;
-				padding: 0.55rem;
-				border-radius: 22px;
-				background: rgba(248, 241, 228, 0.95);
-				border: 1px solid rgba(74, 54, 41, 0.08);
-				box-shadow: var(--shadow-soft);
-			}
-
-			.nav-links.open {
-				display: flex;
-			}
-
-			main {
-				padding: 0.9rem 1rem 3.4rem;
-			}
-
-			.hero {
-				padding-top: 1.8rem;
-				gap: 1.4rem;
-			}
-
-			.hero::before {
-				left: 0;
-				right: 0;
-				top: 0.35rem;
-				transform: none;
-			}
-
-			.section-shell {
-				padding: 1.45rem;
-				border-radius: 26px;
-			}
-
-			.timeline-list li {
-				grid-template-columns: 1fr;
-				gap: 0.3rem;
-			}
-		}
-
-		@media (max-width: 520px) {
-			.hero-copy h1 {
-				font-size: 2.7rem;
-			}
-
-			.hero-actions {
-				flex-direction: column;
-				align-items: stretch;
-			}
-
-			.hero-callout {
-				grid-template-columns: 1fr;
-				gap: 0.65rem;
-			}
-
-			.hero-button,
-			.hero-button.ghost {
-				justify-content: center;
-			}
-		}
+		* { box-sizing: border-box; }
+		html { scroll-behavior: smooth; }
+		body { margin: 0; font-family: "Manrope", sans-serif; color: var(--ink); line-height: 1.75; background: #ffffff; -webkit-font-smoothing: antialiased; }
+		body::before, body::after { content: none; }
+		img { max-width: 100%; display: block; }
+		a { color: var(--accent-deep); text-decoration: none; }
+		a:hover { color: var(--accent); text-decoration: none; }
+		main p a:not(.hero-button):not(.ghost), main li a:not(.hero-button):not(.ghost) { color: var(--link); font-weight: 700; text-decoration-line: underline; text-decoration-thickness: 0.09em; text-underline-offset: 0.18em; text-decoration-color: rgba(45, 110, 134, 0.35); transition: color 0.2s ease, text-decoration-color 0.2s ease, background-size 0.2s ease; }
+		main p a:not(.hero-button):not(.ghost):hover, main li a:not(.hero-button):not(.ghost):hover { color: var(--link-hover); text-decoration-color: rgba(139, 79, 42, 0.42); }
+		.topbar { position: sticky; top: 0; z-index: 20; isolation: isolate; background: rgba(255, 255, 255, 0.92); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid rgba(74, 54, 41, 0.08); box-shadow: 0 8px 24px rgba(31, 24, 19, 0.06); }
+		.topbar::before { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none; background: radial-gradient(circle at 7% 45%, rgba(236, 202, 139, 0.2), transparent 16%), radial-gradient(circle at 88% 20%, rgba(189, 201, 240, 0.18), transparent 18%), radial-gradient(circle at 72% 78%, rgba(197, 224, 184, 0.14), transparent 16%); }
+		.topbar::after { content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 2px; background: linear-gradient(90deg, rgba(198, 150, 73, 0.18), rgba(166, 176, 226, 0.16), rgba(90, 107, 87, 0.14), rgba(233, 188, 197, 0.16)); }
+		.topbar-inner { max-width: var(--content-width); margin: 0 auto; padding: 0.95rem 1.4rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+		.brand { display: inline-flex; align-items: center; gap: 0.85rem; padding: 0.35rem 0.9rem 0.35rem 0.35rem; border-radius: 999px; background: linear-gradient(135deg, rgba(255, 249, 241, 0.96), rgba(255, 255, 255, 0.92)); border: 1px solid rgba(148, 90, 50, 0.08); box-shadow: 0 10px 22px rgba(31, 24, 19, 0.05); color: var(--ink); font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; font-size: 0.8rem; }
+		.brand-mark { width: 2.4rem; height: 2.4rem; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; background: radial-gradient(circle at 35% 30%, rgba(255, 240, 216, 0.95), rgba(255, 240, 216, 0.35) 35%, transparent 36%), linear-gradient(145deg, #6d7d67, #91582f 62%, #c59649); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25), var(--shadow-soft); color: #fff5ea; font-family: "Cormorant Garamond", serif; font-size: 1.1rem; font-weight: 700; }
+		.nav-toggle { display: none; border: 0; background: transparent; color: var(--ink); font-size: 1.3rem; padding: 0.2rem 0.4rem; }
+		.nav-links { display: flex; align-items: center; gap: 0.4rem; list-style: none; margin: 0; padding: 0.35rem 0.45rem; border-radius: 999px; background: linear-gradient(180deg, rgba(255, 253, 249, 0.96), rgba(250, 247, 242, 0.88)); border: 1px solid rgba(148, 90, 50, 0.08); box-shadow: 0 10px 26px rgba(31, 24, 19, 0.05); }
+		.nav-links a { display: inline-flex; align-items: center; padding: 0.55rem 0.9rem; border-radius: 999px; color: var(--ink-soft); font-size: 0.92rem; font-weight: 600; transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease; }
+		.nav-links a:hover, .nav-links a.active { background: linear-gradient(135deg, rgba(198, 150, 73, 0.18), rgba(233, 188, 197, 0.12), rgba(188, 214, 165, 0.12)); color: var(--accent-deep); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.55); transform: translateY(-1px); }
+		main { max-width: var(--content-width); margin: 0 auto; padding: 1.2rem 1.4rem 4.5rem; }
+		.hero { position: relative; display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.85fr); gap: 2.4rem; align-items: center; padding: 3rem 0 1.4rem; overflow: hidden; }
+		.hero::before { content: ""; position: absolute; left: -2rem; right: -2rem; top: 1rem; bottom: 0; z-index: -1; border-radius: 64px; background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(252, 249, 245, 0.96)), radial-gradient(circle at 16% 18%, rgba(217, 171, 98, 0.1), transparent 24%), radial-gradient(circle at 78% 24%, rgba(181, 193, 245, 0.1), transparent 22%); box-shadow: 0 18px 40px rgba(31, 24, 19, 0.08); }
+		.hero-copy { padding: 1.2rem 0.6rem 1.2rem 2.6rem; position: relative; z-index: 1; }
+		.kicker { display: inline-flex; align-items: center; gap: 0.6rem; padding: 0.38rem 0.85rem; border-radius: 999px; background: rgba(90, 107, 87, 0.1); color: var(--forest); font-size: 0.82rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+		.hero-copy h1 { margin: 1.2rem 0 0.6rem; font-family: "Cormorant Garamond", serif; font-size: clamp(3rem, 6vw, 5rem); line-height: 0.95; letter-spacing: -0.04em; font-weight: 600; }
+		.hero-copy h1 span { display: block; margin-top: 0.55rem; font-size: clamp(1.2rem, 2vw, 1.7rem); font-weight: 500; letter-spacing: 0.03em; color: var(--ink-soft); }
+		.hero-role { margin: 0; font-size: 1.08rem; font-weight: 600; color: var(--accent-deep); }
+		.hero-lead { max-width: 52rem; margin: 1.2rem 0 1.5rem; font-size: 1rem; color: var(--ink-soft); }
+		.hero-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1.2rem; }
+		.hero-panel-actions { margin-top: 1.1rem; margin-bottom: 0; flex-direction: column; align-items: stretch; max-width: 290px; margin-left: auto; margin-right: auto; }
+		.hero-panel-actions .hero-button, .hero-panel-actions .hero-button.ghost { justify-content: center; width: 100%; }
+		.hero-callout { display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: start; gap: 0.85rem; margin: 0 0 1.2rem; padding: 0.95rem 1.05rem; border-radius: 20px; background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(252, 249, 245, 0.95)); border: 1px solid rgba(74, 54, 41, 0.08); box-shadow: 0 10px 24px rgba(31, 24, 19, 0.05); max-width: 46rem; }
+		.hero-callout-badge { display: inline-flex; align-items: center; gap: 0.45rem; padding: 0.42rem 0.72rem; border-radius: 999px; background: rgba(148, 90, 50, 0.1); color: var(--accent-deep); font-size: 0.75rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; white-space: nowrap; }
+		.hero-callout-copy { padding-top: 0.05rem; font-size: 0.93rem; line-height: 1.65; color: var(--ink-soft); }
+		.hero-callout-copy strong { color: var(--ink); font-weight: 800; }
+		.hero-support { margin: 0 0 1.35rem; max-width: 46rem; padding: 0.95rem 1.05rem 1rem; border-radius: 18px; background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(252, 249, 245, 0.95)); border: 1px solid rgba(74, 54, 41, 0.08); box-shadow: inset 4px 0 0 rgba(90, 107, 87, 0.18), 0 10px 24px rgba(31, 24, 19, 0.04); }
+		.hero-support-title { display: inline-flex; align-items: center; gap: 0.45rem; margin-bottom: 0.38rem; font-size: 0.8rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--forest); }
+		.hero-support strong { display: block; margin-bottom: 0.34rem; font-size: 0.96rem; color: var(--ink); }
+		.hero-support p { margin: 0; font-size: 0.91rem; line-height: 1.7; color: var(--ink-soft); }
+		.hero-button, .hero-button.ghost { display: inline-flex; align-items: center; gap: 0.55rem; padding: 0.78rem 1.15rem; border-radius: 999px; font-size: 0.92rem; font-weight: 700; transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease; }
+		.hero-button { background: linear-gradient(135deg, var(--accent) 0%, var(--accent-deep) 100%); color: #fff7ed; box-shadow: 0 12px 20px rgba(111, 63, 35, 0.18); }
+		.hero-button:hover { color: #fff7ed; transform: translateY(-1px); box-shadow: 0 16px 24px rgba(111, 63, 35, 0.22); }
+		.hero-button.ghost { background: rgba(255, 255, 255, 0.96); border: 1px solid rgba(74, 54, 41, 0.12); color: var(--ink); }
+		.hero-button.ghost:hover { transform: translateY(-1px); background: #ffffff; }
+		.hero-panel { position: relative; padding: 0.6rem 0.6rem 0.8rem; max-width: 330px; margin-left: auto; margin-right: auto; z-index: 1; }
+		.hero-panel::before, .hero-panel::after { content: none; }
+		.paint-card { position: relative; padding: 0.62rem; border-radius: 20px; background: linear-gradient(160deg, rgba(255, 255, 255, 0.96), rgba(252, 248, 242, 0.9)), linear-gradient(145deg, rgba(148, 90, 50, 0.1), rgba(90, 107, 87, 0.14)), radial-gradient(circle at 78% 18%, rgba(166, 176, 226, 0.2), transparent 26%), radial-gradient(circle at 18% 84%, rgba(233, 188, 197, 0.16), transparent 24%); border: 1px solid rgba(74, 54, 41, 0.1); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.45), 0 16px 34px rgba(31, 24, 19, 0.08); }
+		.paint-surface { aspect-ratio: 0.95 / 1; border-radius: 16px; position: relative; overflow: hidden; background: radial-gradient(circle at 28% 24%, rgba(255, 248, 235, 0.96), transparent 17%), radial-gradient(circle at 74% 22%, rgba(198, 204, 236, 0.22), transparent 22%), radial-gradient(circle at 68% 34%, rgba(247, 225, 231, 0.18), transparent 16%), radial-gradient(circle at 72% 32%, rgba(123, 149, 130, 0.22), transparent 20%), radial-gradient(circle at 40% 78%, rgba(181, 140, 108, 0.16), transparent 23%), linear-gradient(145deg, #c8b39a 0%, #dbc4aa 18%, #efe1cf 48%, #d5d9ea 72%, #b4c3b5 100%); box-shadow: 0 22px 34px rgba(49, 31, 20, 0.18); }
+		.paint-surface::before { content: ""; position: absolute; inset: 0.62rem; border-radius: 16px; background: repeating-linear-gradient(115deg, rgba(255, 255, 255, 0.04) 0 7px, rgba(0, 0, 0, 0.04) 7px 14px), repeating-linear-gradient(20deg, rgba(255, 255, 255, 0.03) 0 10px, rgba(255, 255, 255, 0) 10px 22px); mix-blend-mode: soft-light; pointer-events: none; }
+		.paint-surface img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; object-position: center center; transform: scale(0.76); filter: saturate(0.96) contrast(1.02); }
+		.paint-note { margin-top: 0.5rem; padding-left: 0.3rem; font-family: "Cormorant Garamond", serif; font-size: 0.84rem; font-style: italic; color: var(--ink-soft); text-align: center; }
+		.section-shell { position: relative; margin-top: 2.2rem; padding: 2.1rem; border-radius: var(--radius-lg); background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(252, 249, 245, 0.96)); border: 1px solid rgba(74, 54, 41, 0.1); box-shadow: 0 14px 34px rgba(31, 24, 19, 0.06); overflow: hidden; }
+		.section-shell::before { content: ""; position: absolute; top: 1.3rem; right: 1.6rem; width: 110px; height: 18px; border-radius: 999px; background: linear-gradient(90deg, rgba(148, 90, 50, 0.12), rgba(198, 150, 73, 0.18), rgba(166, 176, 226, 0.16), rgba(90, 107, 87, 0.1)); opacity: 0.8; }
+		.section-heading { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 0.8rem; margin-bottom: 1.3rem; }
+		.section-heading h2 { margin: 0; font-family: "Cormorant Garamond", serif; font-size: clamp(2rem, 3vw, 2.8rem); font-weight: 600; letter-spacing: -0.03em; }
+		.section-heading p { margin: 0; color: var(--ink-soft); font-size: 0.95rem; }
+		.bio-grid { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(260px, 0.9fr); gap: 1.5rem; }
+		.bio-copy p { margin: 0 0 1rem; color: var(--ink-soft); font-size: 0.98rem; }
+		.note-stack { display: grid; gap: 0.95rem; }
+		.note-card { padding: 1.1rem 1.15rem; border-radius: var(--radius-md); background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(252, 249, 245, 0.95)); border: 1px solid rgba(74, 54, 41, 0.1); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.45); }
+		.note-card .label { display: block; margin-bottom: 0.35rem; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--forest); }
+		.note-card strong { display: block; font-size: 1rem; margin-bottom: 0.25rem; }
+		.note-card span { color: var(--ink-soft); font-size: 0.92rem; }
+		.callout { padding: 1rem 1.1rem; border-radius: 18px; background: linear-gradient(135deg, rgba(148, 90, 50, 0.12), rgba(198, 150, 73, 0.12)); border: 1px solid rgba(148, 90, 50, 0.12); color: var(--accent-deep); font-size: 0.94rem; font-weight: 700; }
+		.research-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.2rem; }
+		.paper-card { position: relative; display: flex; flex-direction: column; height: 100%; padding: 1rem; border-radius: 26px; background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(252, 249, 245, 0.96)), linear-gradient(160deg, rgba(148, 90, 50, 0.08), rgba(90, 107, 87, 0.1)), radial-gradient(circle at 84% 16%, rgba(166, 176, 226, 0.12), transparent 24%), radial-gradient(circle at 14% 86%, rgba(233, 188, 197, 0.08), transparent 20%); border: 1px solid rgba(74, 54, 41, 0.1); box-shadow: var(--shadow-soft); transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease; }
+		.paper-card:hover { transform: translateY(-4px) rotate(-0.15deg); box-shadow: 0 20px 36px rgba(58, 38, 24, 0.16); border-color: rgba(111, 63, 35, 0.18); }
+		.paper-thumb { overflow: hidden; border-radius: 18px; margin-bottom: 1rem; border: 1px solid rgba(74, 54, 41, 0.08); background: rgba(234, 217, 187, 0.45); }
+		.paper-thumb img { width: 100%; aspect-ratio: 16 / 9; max-height: 200px; object-fit: contain; background: rgba(255, 248, 236, 0.88); transition: transform 0.35s ease; }
+		.paper-card:hover .paper-thumb img { transform: scale(1.03); }
+		.paper-card h3 { margin: 0 0 0.55rem; font-size: 1.04rem; line-height: 1.45; font-weight: 800; }
+		.paper-authors, .paper-venue { margin: 0; font-size: 0.88rem; color: var(--ink-soft); }
+		.paper-authors { margin-bottom: 0.45rem; }
+		.paper-authors .me { color: var(--ink); font-weight: 800; }
+		.paper-venue { margin-bottom: 0.9rem; font-weight: 700; color: var(--accent-deep); }
+		.paper-links { display: flex; flex-wrap: wrap; gap: 0.45rem; margin-top: auto; }
+		.paper-links a { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.42rem 0.7rem; border-radius: 999px; background: rgba(148, 90, 50, 0.09); color: var(--accent-deep); font-size: 0.78rem; font-weight: 800; letter-spacing: 0.02em; }
+		.paper-links a:hover { background: rgba(148, 90, 50, 0.18); }
+		.split-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+		.news-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.85rem; }
+		.news-list li { padding: 0.95rem 1.05rem; border-radius: var(--radius-md); background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(252, 249, 245, 0.95)); border: 1px solid rgba(74, 54, 41, 0.08); font-size: 0.94rem; color: var(--ink-soft); }
+		.news-list .news-date { font-weight: 800; color: var(--accent-deep); }
+		.timeline-card { padding: 1.2rem; border-radius: var(--radius-md); background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(252, 249, 245, 0.95)); border: 1px solid rgba(74, 54, 41, 0.08); }
+		.timeline-card h3 { margin: 0 0 1rem; font-family: "Cormorant Garamond", serif; font-size: 1.65rem; font-weight: 600; }
+		.timeline-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.8rem; }
+		.timeline-list li { display: grid; grid-template-columns: 110px minmax(0, 1fr); gap: 0.85rem; }
+		.timeline-date { font-size: 0.82rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent-deep); }
+		.timeline-copy { font-size: 0.92rem; color: var(--ink-soft); }
+		.interest-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+		.interest-card { padding: 1.1rem; border-radius: var(--radius-md); background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(252, 249, 245, 0.95)); border: 1px solid rgba(74, 54, 41, 0.08); }
+		.interest-card h3 { margin: 0 0 0.5rem; font-size: 1rem; font-weight: 800; }
+		.interest-card p { margin: 0; font-size: 0.92rem; color: var(--ink-soft); }
+		.footer { padding: 3rem 0 1rem; text-align: center; color: var(--ink-soft); }
+		.footer-name { display: inline-block; padding: 0.35rem 0.8rem; border-radius: 999px; background: rgba(255, 251, 242, 0.72); border: 1px solid rgba(74, 54, 41, 0.08); font-size: 0.86rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--forest); margin-bottom: 0.75rem; }
+		.footer p { margin: 0.2rem 0; font-size: 0.9rem; }
+		.visitor-card { display: flex; flex-direction: column; align-items: center; gap: 0.6rem; margin: 2.2rem auto 0; padding: 1rem 1.1rem 0.85rem; border-radius: 22px; background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(252, 249, 245, 0.96)); border: 1px solid rgba(74, 54, 41, 0.08); box-shadow: 0 12px 28px rgba(31, 24, 19, 0.05); max-width: 420px; }
+		.visitor-label { font-size: 0.76rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--forest); }
+		.visitor-map { min-height: 170px; }
+		.reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+		.reveal.visible { opacity: 1; transform: translateY(0); }
+		@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation: none !important; transition: none !important; } .reveal { opacity: 1; transform: none; } }
+		@media (max-width: 980px) { .hero, .bio-grid, .research-grid, .split-grid, .interest-list { grid-template-columns: 1fr; } .hero-copy { padding: 0.4rem 0 0; } }
+		@media (max-width: 760px) { .topbar-inner { padding: 0.85rem 1rem; } .nav-toggle { display: inline-flex; } .nav-links { position: absolute; top: calc(100% + 0.4rem); left: 1rem; right: 1rem; display: none; flex-direction: column; align-items: stretch; padding: 0.55rem; border-radius: 22px; background: rgba(248, 241, 228, 0.95); border: 1px solid rgba(74, 54, 41, 0.08); box-shadow: var(--shadow-soft); } .nav-links.open { display: flex; } main { padding: 0.9rem 1rem 3.4rem; } .hero { padding-top: 1.8rem; gap: 1.4rem; } .hero::before { left: 0; right: 0; top: 0.35rem; transform: none; } .section-shell { padding: 1.45rem; border-radius: 26px; } .timeline-list li { grid-template-columns: 1fr; gap: 0.3rem; } }
+		@media (max-width: 520px) { .hero-copy h1 { font-size: 2.7rem; } .hero-actions { flex-direction: column; align-items: stretch; } .hero-callout { grid-template-columns: 1fr; gap: 0.65rem; } .hero-button, .hero-button.ghost { justify-content: center; } }
 	</style>
 </head>
 
 <body>
 	<nav class="topbar">
 		<div class="topbar-inner">
-			<a class="brand" href="#home">
-				<span class="brand-mark">BL</span>
-				<span>Bo Li</span>
-			</a>
-			<button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-				<i class="fas fa-bars"></i>
-			</button>
+			<a class="brand" href="#home"><span class="brand-mark">BL</span><span>Bo Li</span></a>
+			<button class="nav-toggle" id="navToggle" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
 			<ul class="nav-links" id="navLinks">
-				<li><a href="#bio">Biography</a></li>
-				<li><a href="#news">News</a></li>
-				<li><a href="#research">Research</a></li>
-				<li><a href="#awards">Awards</a></li>
-				<li><a href="#service">Service</a></li>
-				<li><a href="#interests">Interests</a></li>
+				<li><a href="#bio">Biography</a></li><li><a href="#news">News</a></li><li><a href="#research">Research</a></li><li><a href="#awards">Awards</a></li><li><a href="#service">Service</a></li><li><a href="#interests">Interests</a></li>
 			</ul>
 		</div>
 	</nav>
@@ -1009,301 +159,61 @@
 		<section class="hero reveal" id="home">
 			<div class="hero-copy">
 				<div class="kicker">Personal Homepage</div>
-				<h1>
-					Bo Li
-					<span>李博 · MSCS Student</span>
-				</h1>
+				<h1>Bo Li<span>李博 · MSCS Student</span></h1>
 				<p class="hero-role">MSCS Student at UIUC</p>
-				<p class="hero-lead">
-					I work on generative multimodal models, unified multimodal systems, and evaluations for perception and reasoning.
-					My recent research centers on making multimodal models see more faithfully, reason more structurally, and generate with stronger grounding.
-				</p>
-				<div class="hero-callout">
-					<div class="hero-callout-badge">
-						<i class="fas fa-seedling"></i>
-						Open To
-					</div>
-					<div class="hero-callout-copy">
-						<strong>Internships and collaborations.</strong> I am broadly interested in many topics, including but not limited to VLMs, agents, evaluation, and related multimodal research directions.
-					</div>
-				</div>
-				<div class="hero-support">
-					<span class="hero-support-title">
-						<i class="fas fa-hand-holding-heart"></i>
-						For Junior Students
-					</span>
-					<strong>Happy to chat about applications, summer research, and AI ideas.</strong>
-					<p>
-						I received a lot of help during the Fall 2026 application cycle, and I would love to pass that support on.
-						If you are a junior undergraduate student and would like to chat about applications, summer research, life, career planning, or AI-related research ideas, feel free to reach out.
-					</p>
-				</div>
+				<p class="hero-lead">I work on generative multimodal models, unified multimodal systems, and evaluations for perception and reasoning. My recent research centers on making multimodal models see more faithfully, reason more structurally, and generate with stronger grounding.</p>
+				<div class="hero-callout"><div class="hero-callout-badge"><i class="fas fa-seedling"></i>Open To</div><div class="hero-callout-copy"><strong>Internships and collaborations.</strong> I am broadly interested in many topics, including but not limited to VLMs, agents, evaluation, and related multimodal research directions.</div></div>
+				<div class="hero-support"><span class="hero-support-title"><i class="fas fa-hand-holding-heart"></i>For Junior Students</span><strong>Happy to chat about applications, summer research, and AI ideas.</strong><p>I received a lot of help during the Fall 2026 application cycle, and I would love to pass that support on. If you are a junior undergraduate student and would like to chat about applications, summer research, life, career planning, or AI-related research ideas, feel free to reach out.</p></div>
 			</div>
 			<div class="hero-panel">
-				<div class="paint-card">
-					<div class="paint-surface">
-						<img src="asset/image/bo-li-self.jpg" alt="Portrait of Bo Li">
-					</div>
-				</div>
+				<div class="paint-card"><div class="paint-surface"><img src="asset/image/bo-li-self.jpg" alt="Portrait of Bo Li"></div></div>
 				<div class="paint-note">Portrait framed in the same painterly visual language.</div>
 				<div class="hero-actions hero-panel-actions">
-					<a class="hero-button" href="mailto:lib21@m.fudan.edu.cn">
-						<i class="fas fa-envelope"></i>
-						lib21@m.fudan.edu.cn
-					</a>
-					<a class="hero-button ghost" href="mailto:bol8@Illinois.edu">
-						<i class="fas fa-envelope-open-text"></i>
-						bol8@Illinois.edu
-					</a>
-					<a class="hero-button ghost" href="https://scholar.google.com/citations?hl=en&amp;user=X8H6V5IAAAAJ">
-						<i class="fas fa-graduation-cap"></i>
-						Google Scholar
-					</a>
-					<a class="hero-button ghost" href="https://github.com/primerL">
-						<i class="fab fa-github"></i>
-						GitHub
-					</a>
+					<a class="hero-button" href="mailto:bol8@illinois.edu"><i class="fas fa-envelope"></i>bol8@illinois.edu</a>
+					<a class="hero-button ghost" href="mailto:bettyli2332@gmail.com"><i class="fas fa-envelope-open-text"></i>bettyli2332@gmail.com</a>
+					<a class="hero-button ghost" href="https://scholar.google.com/citations?hl=en&amp;user=X8H6V5IAAAAJ"><i class="fas fa-graduation-cap"></i>Google Scholar</a>
+					<a class="hero-button ghost" href="https://github.com/primerL"><i class="fab fa-github"></i>GitHub</a>
 				</div>
 			</div>
 		</section>
 
-		<section class="section-shell reveal" id="news">
-			<div class="section-heading">
-				<h2>News</h2>
-				<p>Selected recent updates.</p>
-			</div>
-			<ul class="news-list">
-				<li><span class="news-date">[Jun 2026]</span> <em><a href="https://zlab-princeton.github.io/UEval/">UEval</a></em> was accepted to ECCV 2026.</li>
-				<li><span class="news-date">[May 2026]</span> <em>GUI Agents for Continual Game Generation</em> was released on arXiv.</li>
-				<li><span class="news-date">[Jan 2026]</span> <em>UEval: A Benchmark for Unified Multimodal Generation</em> was released on arXiv.</li>
-				<li><span class="news-date">[2025]</span> <em>Anyprefer: An Agentic Framework For Preference Data Synthesis</em> was accepted to ICLR 2025.</li>
-			</ul>
-		</section>
+		<section class="section-shell reveal" id="news"><div class="section-heading"><h2>News</h2><p>Selected recent updates.</p></div><ul class="news-list">
+			<li><span class="news-date">[Aug 2026]</span> <em>GUI Agents for Continual Game Generation</em> was accepted to Findings of EMNLP 2026.</li>
+			<li><span class="news-date">[Jun 2026]</span> <em><a href="https://zlab-princeton.github.io/UEval/">UEval</a></em> was accepted to ECCV 2026.</li>
+			<li><span class="news-date">[May 2026]</span> <em>GUI Agents for Continual Game Generation</em> was released on arXiv.</li>
+			<li><span class="news-date">[Jan 2026]</span> <em>UEval: A Benchmark for Unified Multimodal Generation</em> was released on arXiv.</li>
+		</ul></section>
 
-		<section class="section-shell reveal" id="bio">
-			<div class="section-heading">
-				<h2>Biography</h2>
-				<p>A cleaner academic structure, now using your own background and research profile.</p>
-			</div>
-			<div class="bio-grid">
-				<div class="bio-copy">
-					<p>
-						Hi! I'm Bo Li, an incoming MSCS student at UIUC. Previously, I was a research intern at Princeton University advised by
-						Prof. <a href="https://liuzhuang13.github.io/">Zhuang Liu</a> and
-						Dr. <a href="https://zeyofu.github.io/">Xingyu Fu</a>. During this internship, I had the privilege of working closely with amazing collaborators,
-						including <a href="https://davidyyd.github.io/">Yida Yin</a> and <a href="https://wenhaochai.com/">Wenhao Chai</a>.
-					</p>
-					<p>
-						Before that, I worked as a research assistant at UNC-Chapel Hill advised by
-						<a href="https://www.huaxiuyao.io/">Huaxiu Yao</a>, and at Fudan University advised by
-						<a href="https://fvl.fudan.edu.cn/people/jingjingchen/">Jingjing Chen</a>.
-					</p>
-					<p>
-						My research interests include, but are not limited to, AI alignment, unified models for multimodal understanding and generation,
-						and benchmarks and evaluation. My pronouns are She/Her/Hers.
-					</p>
-				</div>
-				<div class="note-stack">
-					<div class="note-card">
-						<span class="label">Current</span>
-						<strong>Princeton University</strong>
-						<span>Research intern working on multimodal generation and evaluation.</span>
-					</div>
-					<div class="note-card">
-						<span class="label">Home Institution</span>
-						<strong>Fudan University</strong>
-						<span>Undergraduate student.</span>
-					</div>
-					<div class="note-card">
-						<span class="label">Past Research</span>
-						<strong>UNC-Chapel Hill and Fudan</strong>
-						<span>Research assistant experiences across multimodal and alignment work.</span>
-					</div>
-				</div>
-			</div>
-		</section>
+		<section class="section-shell reveal" id="bio"><div class="section-heading"><h2>Biography</h2><p>A cleaner academic structure, now using your own background and research profile.</p></div><div class="bio-grid"><div class="bio-copy">
+			<p>Hi! I'm Bo Li, an incoming MSCS student at UIUC. Previously, I was a research intern at Princeton University advised by Prof. <a href="https://liuzhuang13.github.io/">Zhuang Liu</a> and Dr. <a href="https://zeyofu.github.io/">Xingyu Fu</a>. During this internship, I had the privilege of working closely with amazing collaborators, including <a href="https://davidyyd.github.io/">Yida Yin</a> and <a href="https://wenhaochai.com/">Wenhao Chai</a>.</p>
+			<p>Before that, I worked as a research assistant at UNC-Chapel Hill advised by <a href="https://www.huaxiuyao.io/">Huaxiu Yao</a>, and at Fudan University advised by <a href="https://fvl.fudan.edu.cn/people/jingjingchen/">Jingjing Chen</a>.</p>
+			<p>My research interests include, but are not limited to, AI alignment, unified models for multimodal understanding and generation, and benchmarks and evaluation. My pronouns are She/Her/Hers.</p>
+		</div><div class="note-stack"><div class="note-card"><span class="label">Current</span><strong>Princeton University</strong><span>Research intern working on multimodal generation and evaluation.</span></div><div class="note-card"><span class="label">Home Institution</span><strong>Fudan University</strong><span>Undergraduate student.</span></div><div class="note-card"><span class="label">Past Research</span><strong>UNC-Chapel Hill and Fudan</strong><span>Research assistant experiences across multimodal and alignment work.</span></div></div></div></section>
 
-		<section class="section-shell reveal" id="research">
-			<div class="section-heading">
-				<h2>Research</h2>
-				<p>Current selected publications.</p>
-			</div>
-			<div class="research-grid">
-				<article class="paper-card reveal">
-					<div class="paper-thumb">
-						<img src="https://github.com/user-attachments/assets/f66379a8-c571-4cba-8e9b-78d158ecd26c" alt="UEval">
-					</div>
-					<h3>UEval: A Benchmark for Unified Multimodal Generation</h3>
-					<p class="paper-authors"><span class="me">Bo Li</span>, Yida Yin, Wenhao Chai, Xingyu Fu*, Zhuang Liu*</p>
-					<p class="paper-venue">ECCV 2026</p>
-					<div class="paper-links">
-						<a href="https://arxiv.org/pdf/2601.22155">Paper</a>
-						<a href="https://zlab-princeton.github.io/UEval/">Website</a>
-						<a href="https://github.com/zlab-princeton/UEval">Code</a>
-						<a href="https://huggingface.co/datasets/zlab-princeton/UEval">Dataset</a>
-						<a href="https://x.com/liuzhuang1234/status/2018123463979077899">X</a>
-					</div>
-				</article>
+		<section class="section-shell reveal" id="research"><div class="section-heading"><h2>Research</h2><p>Current selected publications.</p></div><div class="research-grid">
+			<article class="paper-card reveal"><div class="paper-thumb"><img src="https://github.com/user-attachments/assets/f66379a8-c571-4cba-8e9b-78d158ecd26c" alt="UEval"></div><h3>UEval: A Benchmark for Unified Multimodal Generation</h3><p class="paper-authors"><span class="me">Bo Li</span>, Yida Yin, Wenhao Chai, Xingyu Fu*, Zhuang Liu*</p><p class="paper-venue">ECCV 2026</p><div class="paper-links"><a href="https://arxiv.org/pdf/2601.22155">Paper</a><a href="https://zlab-princeton.github.io/UEval/">Website</a><a href="https://github.com/zlab-princeton/UEval">Code</a><a href="https://huggingface.co/datasets/zlab-princeton/UEval">Dataset</a><a href="https://x.com/liuzhuang1234/status/2018123463979077899">X</a></div></article>
+			<article class="paper-card reveal"><div class="paper-thumb"><img src="https://github.com/user-attachments/assets/bfb46f24-bae3-4c4c-96fc-1c91674cfe48" alt="GUI Agents for Continual Game Generation"></div><h3>GUI Agents for Continual Game Generation</h3><p class="paper-authors">Yixu Huang*, <span class="me">Bo Li*</span>, Na Li*, Zhe Wang, Kaijie Chen, Haonan Ge, Qingyi Si, Yuanzhe Shen, Ruihan Yang, Guangjing Wang, Hongcheng Guo</p><p class="paper-venue">Findings of EMNLP 2026</p><div class="paper-links"><a href="https://arxiv.org/abs/2605.28258">Paper</a><a href="https://continual-game-generation.vercel.app/">Website</a></div></article>
+			<article class="paper-card reveal"><div class="paper-thumb"><img src="https://github.com/user-attachments/assets/0d94c976-3472-4486-93cd-221fb57a6355" alt="Anyprefer"></div><h3>Anyprefer: An Agentic Framework For Preference Data Synthesis</h3><p class="paper-authors">Yiyang Zhou*, Zhaoyang Wang*, Tianle Wang*, Shangyu Xing†, Peng Xia†, <span class="me">Bo Li†</span>, Kaiyuan Zheng†, Zijian Zhang†, Zhaorun Chen, Wenhao Zheng, Xuchao Zhang, Chetan Bansal, Weitong Zhang, Ying Wei, Mohit Bansal, Huaxiu Yao</p><p class="paper-venue">ICLR 2025</p><div class="paper-links"><a href="https://arxiv.org/pdf/2504.19276">Paper</a></div></article>
+		</div></section>
 
-				<article class="paper-card reveal">
-					<div class="paper-thumb">
-						<img src="https://github.com/user-attachments/assets/bfb46f24-bae3-4c4c-96fc-1c91674cfe48" alt="GUI Agents for Continual Game Generation">
-					</div>
-					<h3>GUI Agents for Continual Game Generation</h3>
-					<p class="paper-authors">Yixu Huang*, <span class="me">Bo Li*</span>, Na Li*, Zhe Wang, Kaijie Chen, Haonan Ge, Qingyi Si, Yuanzhe Shen, Ruihan Yang, Guangjing Wang, Hongcheng Guo</p>
-					<p class="paper-venue">ArXiv, May 2026</p>
-					<div class="paper-links">
-						<a href="https://arxiv.org/abs/2605.28258">Paper</a>
-						<a href="https://continual-game-generation.vercel.app/">Website</a>
-					</div>
-				</article>
-
-				<article class="paper-card reveal">
-					<div class="paper-thumb">
-						<img src="https://github.com/user-attachments/assets/0d94c976-3472-4486-93cd-221fb57a6355" alt="Anyprefer">
-					</div>
-					<h3>Anyprefer: An Agentic Framework For Preference Data Synthesis</h3>
-					<p class="paper-authors">Yiyang Zhou*, Zhaoyang Wang*, Tianle Wang*, Shangyu Xing†, Peng Xia†, <span class="me">Bo Li†</span>, Kaiyuan Zheng†, Zijian Zhang†, Zhaorun Chen, Wenhao Zheng, Xuchao Zhang, Chetan Bansal, Weitong Zhang, Ying Wei, Mohit Bansal, Huaxiu Yao</p>
-					<p class="paper-venue">ICLR 2025</p>
-					<div class="paper-links">
-						<a href="https://arxiv.org/pdf/2504.19276">Paper</a>
-					</div>
-				</article>
-			</div>
-		</section>
-
-		<section class="section-shell reveal" id="awards">
-			<div class="section-heading">
-				<h2>Awards</h2>
-				<p>Selected honors.</p>
-			</div>
-			<div class="timeline-card">
-				<ul class="timeline-list">
-					<li>
-						<div class="timeline-date">2022</div>
-						<div class="timeline-copy">China National Scholarship, the highest national scholarship for Chinese college students, awarded to roughly 0.2%.</div>
-					</li>
-					<li>
-						<div class="timeline-date">2023, 2024</div>
-						<div class="timeline-copy">Fudan Scholarship University.</div>
-					</li>
-				</ul>
-			</div>
-		</section>
-
-		<section class="section-shell reveal" id="service">
-			<div class="section-heading">
-				<h2>Service</h2>
-				<p>Reviewing and teaching experience.</p>
-			</div>
-			<div class="split-grid">
-				<div class="timeline-card">
-					<h3>Academic Service</h3>
-					<ul class="timeline-list">
-						<li>
-							<div class="timeline-date">2026</div>
-							<div class="timeline-copy">Reviewer for AAAI 2026, AISI Track.</div>
-						</li>
-						<li>
-							<div class="timeline-date">2026</div>
-							<div class="timeline-copy">Reviewer for ICLR 2026.</div>
-						</li>
-					</ul>
-				</div>
-				<div class="timeline-card">
-					<h3>Teaching</h3>
-					<ul class="timeline-list">
-						<li>
-							<div class="timeline-date">TA</div>
-							<div class="timeline-copy">Assistant for Computer Architecture, Honors Course, responsible for designing course assignments and guiding students in their learning experience and academic performance.</div>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</section>
-
-		<section class="section-shell reveal" id="interests">
-			<div class="section-heading">
-				<h2>Interests</h2>
-				<p>Small details outside research.</p>
-			</div>
-			<div class="interest-list">
-				<div class="interest-card">
-					<h3>Piano and Guitar</h3>
-					<p>Enjoy playing the piano, and used to play the guitar, though it has been a long time since I last picked it up.</p>
-				</div>
-				<div class="interest-card">
-					<h3>Games</h3>
-					<p>Genshin Impact and Zenless Zone Zero.</p>
-				</div>
-				<div class="interest-card">
-					<h3>Travel</h3>
-					<p>Hope to have the chance to travel around the world.</p>
-				</div>
-			</div>
-		</section>
-
-		<div class="visitor-card reveal">
-			<div class="visitor-label">Visitors</div>
-			<div class="visitor-map">
-				<script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=p0wINMsuXzzVs8EhOzCviMJjeTfDPpnmpjx31Fe5S_o&amp;cl=ffffff&amp;w=a"></script>
-			</div>
-		</div>
-
-		<footer class="footer">
-			<div class="footer-name">Bo Li</div>
-		</footer>
+		<section class="section-shell reveal" id="awards"><div class="section-heading"><h2>Awards</h2><p>Selected honors.</p></div><div class="timeline-card"><ul class="timeline-list"><li><div class="timeline-date">2022</div><div class="timeline-copy">China National Scholarship, the highest national scholarship for Chinese college students, awarded to roughly 0.2%.</div></li><li><div class="timeline-date">2023, 2024</div><div class="timeline-copy">Fudan Scholarship University.</div></li></ul></div></section>
+		<section class="section-shell reveal" id="service"><div class="section-heading"><h2>Service</h2><p>Reviewing and teaching experience.</p></div><div class="split-grid"><div class="timeline-card"><h3>Academic Service</h3><ul class="timeline-list"><li><div class="timeline-date">2026</div><div class="timeline-copy">Reviewer for AAAI 2026, AISI Track.</div></li><li><div class="timeline-date">2026</div><div class="timeline-copy">Reviewer for ICLR 2026.</div></li></ul></div><div class="timeline-card"><h3>Teaching</h3><ul class="timeline-list"><li><div class="timeline-date">TA</div><div class="timeline-copy">Assistant for Computer Architecture, Honors Course, responsible for designing course assignments and guiding students in their learning experience and academic performance.</div></li></ul></div></div></section>
+		<section class="section-shell reveal" id="interests"><div class="section-heading"><h2>Interests</h2><p>Small details outside research.</p></div><div class="interest-list"><div class="interest-card"><h3>Piano and Guitar</h3><p>Enjoy playing the piano, and used to play the guitar, though it has been a long time since I last picked it up.</p></div><div class="interest-card"><h3>Games</h3><p>Genshin Impact and Zenless Zone Zero.</p></div><div class="interest-card"><h3>Travel</h3><p>Hope to have the chance to travel around the world.</p></div></div></section>
+		<div class="visitor-card reveal"><div class="visitor-label">Visitors</div><div class="visitor-map"><script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=p0wINMsuXzzVs8EhOzCviMJjeTfDPpnmpjx31Fe5S_o&amp;cl=ffffff&amp;w=a"></script></div></div>
+		<footer class="footer"><div class="footer-name">Bo Li</div></footer>
 	</main>
 
 	<script>
 		const navToggle = document.getElementById("navToggle");
 		const navLinks = document.getElementById("navLinks");
-
-		navToggle.addEventListener("click", () => {
-			navLinks.classList.toggle("open");
-		});
-
-		document.querySelectorAll(".nav-links a").forEach((link) => {
-			link.addEventListener("click", () => {
-				navLinks.classList.remove("open");
-			});
-		});
-
-		const revealObserver = new IntersectionObserver((entries) => {
-			entries.forEach((entry) => {
-				if (entry.isIntersecting) {
-					entry.target.classList.add("visible");
-				}
-			});
-		}, {
-			threshold: 0.1,
-			rootMargin: "0px 0px -48px 0px"
-		});
-
-		document.querySelectorAll(".reveal").forEach((element) => {
-			revealObserver.observe(element);
-		});
-
+		navToggle.addEventListener("click", () => { navLinks.classList.toggle("open"); });
+		document.querySelectorAll(".nav-links a").forEach((link) => { link.addEventListener("click", () => { navLinks.classList.remove("open"); }); });
+		const revealObserver = new IntersectionObserver((entries) => { entries.forEach((entry) => { if (entry.isIntersecting) { entry.target.classList.add("visible"); } }); }, { threshold: 0.1, rootMargin: "0px 0px -48px 0px" });
+		document.querySelectorAll(".reveal").forEach((element) => { revealObserver.observe(element); });
 		const sections = document.querySelectorAll("main section[id]");
 		const anchorLinks = document.querySelectorAll(".nav-links a[href^='#']");
-
-		const updateActiveNav = () => {
-			let currentId = "";
-			sections.forEach((section) => {
-				const sectionTop = section.offsetTop - 120;
-				if (window.scrollY >= sectionTop) {
-					currentId = section.getAttribute("id");
-				}
-			});
-
-			anchorLinks.forEach((link) => {
-				link.classList.toggle("active", link.getAttribute("href") === "#" + currentId);
-			});
-		};
-
-		window.addEventListener("scroll", updateActiveNav);
-		updateActiveNav();
+		const updateActiveNav = () => { let currentId = ""; sections.forEach((section) => { const sectionTop = section.offsetTop - 120; if (window.scrollY >= sectionTop) { currentId = section.getAttribute("id"); } }); anchorLinks.forEach((link) => { link.classList.toggle("active", link.getAttribute("href") === "#" + currentId); }); };
+		window.addEventListener("scroll", updateActiveNav); updateActiveNav();
 	</script>
 </body>
-
 </html>
