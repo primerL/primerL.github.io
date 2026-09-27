@@ -1,0 +1,22 @@
+.coastal-margin,.coastal-shimmer,.reading-voyage{display:none}
+@media(min-width:1440px) and (pointer:fine){
+ .coastal-margin{display:block;position:fixed;top:82px;bottom:0;width:calc((100vw - var(--page))/2 - 28px);pointer-events:none;z-index:0;mask-image:linear-gradient(to bottom,transparent 0%,#000 18%,#000 78%,transparent 100%)}
+ .coastal-margin::before{content:'';position:absolute;inset:0;background-repeat:no-repeat;background-size:auto 100%}
+ .coastal-margin-left{left:0}.coastal-margin-left::before{background-image:url('assets/coastal-oil-painting.png');background-position:0 center;opacity:.27;mask-image:linear-gradient(to right,#000,rgba(0,0,0,.7) 35%,transparent 100%)}
+ .coastal-margin-right{right:0}.coastal-margin-right::before{background-image:url('island/assets/oil-sea.png');background-position:60% center;opacity:.17;mask-image:linear-gradient(to left,#000,rgba(0,0,0,.6) 30%,transparent 100%)}
+ .coastal-shimmer{display:block;position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:2}
+ .reading-voyage{display:block;position:fixed;right:max(8px,calc((100vw - var(--page))/4 - 81px));top:calc(50vh - 140px);width:134px;z-index:3;font-size:11px;line-height:1.4;color:#6b8890}
+ .voyage-caption{display:block;font-size:8px;letter-spacing:.17em;font-weight:500;margin:0 0 18px 32px;color:#7f9699}
+ .voyage-course{position:relative;height:272px}
+ .voyage-thread{position:absolute;left:0;top:0;width:24px;height:272px;fill:none;stroke:#9ab7ba;stroke-width:1;stroke-dasharray:2 6;opacity:.7;pointer-events:none}
+ .voyage-course ol{list-style:none;position:relative;display:flex;flex-direction:column;justify-content:space-between;height:272px;margin:0;padding:0}
+ .voyage-course li{height:24px}.voyage-course a{display:flex;align-items:center;gap:16px;height:24px;padding-left:8px;color:#6a858d;white-space:nowrap;text-decoration:none;transition:color .2s}
+ .voyage-dot{flex:0 0 7px;height:7px;border:1px solid #91adb0;border-radius:50%;background:#fdfdf8;transition:background .2s}
+ .voyage-course a:hover,.voyage-course a[aria-current]{color:#2c728a}.voyage-course a[aria-current] .voyage-dot{background:#659b9e;border-color:#659b9e}
+ .voyage-course a:focus-visible{outline:2px solid #649b9e;outline-offset:4px;border-radius:3px}
+ .voyage-boat{position:absolute;left:-28px;top:0;width:38px;height:38px;transform:translateY(calc(var(--boat-y,12px) - 19px));transition:transform .2s ease-out;pointer-events:none}
+ .voyage-boat svg{display:block;width:100%;height:100%;filter:drop-shadow(0 2px 2px #38687c12)}
+ .is-sailing .voyage-boat svg{animation:sail-rock 1.6s ease-in-out infinite}
+ @keyframes sail-rock{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg) translateY(-1px)}}
+}
+@media(prefers-reduced-motion:reduce){.voyage-boat,.voyage-course a,.voyage-dot{transition:none}.is-sailing .voyage-boat svg{animation:none}}

@@ -185,3 +185,15 @@ strong,.underline,.me{color:#303940}
 .island-launch:hover .island-tooltip,.island-launch:focus-visible .island-tooltip{opacity:1;visibility:visible;transform:translate(-50%,0)}
 @media(max-width:650px){.name-row{gap:13px;padding-bottom:29px;margin-bottom:22px}.name-row::after{width:182px;height:24px}.island-launch{width:54px;height:48px;flex-basis:54px}.island-launch svg{width:54px;height:43px}.island-tooltip{left:auto;right:0;transform:translateY(4px)}.island-launch:hover .island-tooltip,.island-launch:focus-visible .island-tooltip{transform:translateY(0)}}
 @media(prefers-reduced-motion:reduce){.island-launch,.island-launch svg,.island-tooltip{transition:none}.island-launch:hover svg,.island-launch:focus-visible svg{transform:none}}
+
+/* Recognizable platform marks, with visible keyboard focus and text tooltips. */
+.profile-links.social-links{gap:7px;margin-top:12px;margin-left:-7px;align-items:center}
+.social-links .social-link{border:0;padding:0;position:relative;display:inline-flex;width:36px;height:36px;flex:0 0 36px;align-items:center;justify-content:center;border-radius:50%;color:#607f90;text-decoration:none;transition:color .18s,background-color .18s}
+.social-link svg{display:block;width:20px;height:20px;fill:currentColor}
+.social-link.social-google-scholar svg{width:22px;height:22px}.social-link.social-x svg{width:18px;height:18px}
+.social-links .social-link:hover,.social-links .social-link:focus-visible{background:#e7efee;color:#245f80;text-decoration:none}
+.social-links .social-link:focus-visible{outline:2px solid #41799d;outline-offset:3px}
+.social-tooltip{position:absolute;bottom:calc(100% + 6px);left:50%;transform:translate(-50%,3px);padding:5px 9px;background:#fffdf4;border:1px solid #dce5df;border-radius:4px;color:#365c70;font:500 11px/1.4 Inter,system-ui,sans-serif;white-space:nowrap;box-shadow:0 3px 12px #365c7012;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .18s,transform .18s}
+.social-link:hover .social-tooltip,.social-link:focus-visible .social-tooltip{opacity:1;visibility:visible;transform:translate(-50%,0)}
+@media(max-width:650px){.profile-links.social-links{gap:7px;margin-top:5px;margin-left:-8px}.social-links .social-link{width:38px;height:38px;flex-basis:38px}}
+@media(prefers-reduced-motion:reduce){.social-links .social-link,.social-tooltip{transition:none}}
