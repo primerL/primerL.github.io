@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;450;500;550;600;650;700;750;800&display=swap');
+:root{--bg:#fdfdf8;--ink:#284c63;--text:#3e505a;--muted:#63747a;--link:#346b8c;--accent:#e2cf9a;--wash:#f6f6de;--line:#d9ded9;--teal:#407669;--ocean:#41799d;--dream:#8aacc8;--mint:#a7d9c7;--lavender:#bec7e1;--page:1080px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:100px}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.75 'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;-webkit-font-smoothing:antialiased}img{display:block;max-width:100%}a{color:var(--link);text-decoration:none;text-underline-offset:4px}a:hover{text-decoration:underline}button{font:inherit}a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--ocean);outline-offset:5px}h1,h2,h3,p{margin:0}h1,h2,h3{color:var(--ink)}h2{font-size:1.85rem;letter-spacing:-.055em;line-height:1.2;font-weight:750}h3{font-size:1.1rem;line-height:1.45;letter-spacing:-.025em}strong{font-weight:650;color:var(--ink)}
+.skip{position:absolute;top:-100px;left:16px;background:white;padding:8px;z-index:10}.skip:focus{top:8px}.wrap{width:min(var(--page),calc(100% - 80px));margin:auto}.site-header{position:sticky;top:0;z-index:5;background:rgba(246,246,222,.97);border-bottom:1px solid var(--line)}.header-inner{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}.wordmark{color:var(--ink);font-size:1.35rem;font-weight:800;letter-spacing:-.065em;line-height:1.2}.wordmark span{box-shadow:none}.wordmark:hover{text-decoration:none}.nav-links{display:flex;gap:27px;align-items:center}.nav-links a{color:var(--muted);font-size:.875rem;font-weight:550;padding:8px 0;border-bottom:2px solid transparent}.nav-links a:hover,.nav-links a[aria-current]{color:var(--ink);text-decoration:none;border-color:var(--accent)}.menu-toggle{display:none;background:none;border:1px solid var(--line);padding:6px 12px;color:var(--ink);border-radius:4px}
+.intro{display:grid;grid-template-columns:205px minmax(0,1fr);gap:68px;padding:76px 0 58px;align-items:start}.profile{padding-top:8px}.portrait{position:relative;margin:0 10px 28px 0}.portrait::before{content:none}.portrait img{width:100%;aspect-ratio:1/1.2;object-fit:cover;object-position:50% 45%;border-radius:5px}.profile-affiliation{font-size:.95rem;font-weight:600;color:var(--ink)}.profile-detail{color:var(--muted);font-size:.875rem}.profile-links{display:flex;gap:16px;margin-top:13px;font-size:.875rem;font-weight:550}.profile-email{font-size:.875rem;overflow-wrap:anywhere}.eyebrow{color:var(--link);font-size:.75rem;line-height:1.4;letter-spacing:.12em;text-transform:uppercase;font-weight:650;margin-bottom:12px}.intro h1{font-size:3.45rem;line-height:1.1;letter-spacing:-.065em;font-weight:750;margin-bottom:25px}.intro h1 span{box-shadow:none}.intro h1 small{font-family:system-ui,sans-serif;font-size:1.5rem;font-weight:400;letter-spacing:.04em;color:var(--muted);margin-left:13px;white-space:nowrap}.intro-copy p{margin:0 0 17px}.intro-copy p a{font-weight:550}.intro-copy .research-focus{margin-top:23px}.underline{background:none;color:var(--ink);font-weight:550}.opportunity{font-size:.9375rem;margin-top:24px;border-left:3px solid var(--accent);padding:2px 0 2px 17px}.opportunity strong{font-weight:650}.opportunity a{white-space:nowrap}
+.section{padding:42px 0;border-top:1px solid var(--line)}.section-top{display:flex;justify-content:space-between;gap:20px;align-items:baseline;margin-bottom:27px}.section-top>a{font-size:.875rem}.section-kicker{font-size:.75rem;letter-spacing:.1em;font-weight:600;color:var(--muted);margin-bottom:8px}.news-list{list-style:none;margin:0;padding:0;display:grid;gap:11px}.news-list li{display:grid;grid-template-columns:94px minmax(0,1fr);gap:20px;font-size:.9375rem;line-height:1.65}.news-date{font-size:.8125rem;color:var(--muted);font-variant-numeric:tabular-nums;padding-top:2px}.news-list em{font-style:normal}.news-list .news-copy{min-width:0}.news-list li:first-child .news-date{color:var(--link);font-weight:650}
+.paper-list{display:grid;gap:0}.paper{display:grid;grid-template-columns:235px minmax(0,1fr);gap:32px;padding:28px 0;border-bottom:1px solid var(--line);align-items:start}.paper:first-child{padding-top:0}.paper:last-child{border-bottom:0;padding-bottom:0}.paper-image{display:flex;align-items:center;justify-content:center;background:#fff;border:1px solid var(--line);border-radius:4px;min-height:147px;overflow:hidden}.paper-image img{width:100%;aspect-ratio:16/10;object-fit:contain}.paper h3 a{color:var(--ink)}.paper h3 a:hover{color:var(--link)}.venue{display:inline-block;color:var(--link);font-size:.75rem;font-weight:650;letter-spacing:.035em;margin-bottom:8px;padding:1px 8px;background:var(--wash);border-radius:3px}.paper-authors{font-size:.875rem;line-height:1.7;color:var(--muted);margin-top:9px}.me{font-weight:650;color:var(--ink);text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:3px}.paper-links{display:flex;gap:18px;flex-wrap:wrap;margin-top:13px}.paper-links a{font-size:.8125rem;font-weight:600;border-bottom:1px solid var(--dream);padding:2px 0}.paper-links a:hover{text-decoration:none;border-bottom-color:var(--link)}
+.academic-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:72px}.academic-grid h2{margin-bottom:26px}.detail-list{list-style:none;margin:0;padding:0;display:grid;gap:20px}.detail-list li{font-size:.9375rem}.detail-year{font-size:.8125rem;color:var(--link);font-weight:550;display:block;margin-bottom:4px}.detail-list p,.service-block p{color:var(--muted);font-size:.9375rem}.service-block+.service-block{margin-top:22px}.service-block h3{font-size:.95rem;margin-bottom:5px}.service-block p+p{margin-top:4px}.personal{background:#edf3f5;padding:34px 38px;margin:14px 0 44px;border-radius:5px}.personal h2{margin-bottom:25px}.interests{display:grid;grid-template-columns:1fr 1fr 1fr;gap:34px}.interests h3{font-size:.9375rem;margin-bottom:8px}.interests p{font-size:.875rem;color:var(--muted)}.mentoring{padding:34px 0 42px;border-top:1px solid var(--line);display:grid;grid-template-columns:205px minmax(0,1fr);gap:68px}.mentoring h2{font-size:1.4rem;letter-spacing:-.04em}.mentoring p{font-size:.9375rem}.mentoring a{font-weight:550}
+@media(min-width:1500px){:root{--page:1120px}.intro{gap:78px;padding-top:88px}}
+@media(max-width:900px){.wrap{width:calc(100% - 48px)}.intro{grid-template-columns:185px minmax(0,1fr);gap:36px;padding-top:48px}.intro h1{font-size:2.9rem}.intro h1 small{font-size:1.2rem}.nav-links{gap:18px}.paper{grid-template-columns:200px minmax(0,1fr);gap:25px}.academic-grid{gap:36px}.mentoring{grid-template-columns:200px minmax(0,1fr);gap:36px}}
+@media(max-width:650px){html{scroll-padding-top:85px}.wrap{width:calc(100% - 40px)}.header-inner{min-height:64px}.menu-toggle{display:block}.nav-links{display:none;position:absolute;top:64px;left:0;right:0;background:var(--bg);padding:16px 20px 20px;border-bottom:1px solid var(--line);flex-wrap:wrap;gap:10px 23px}.nav-links.is-open{display:flex}.nav-links a{font-size:.9375rem}.intro{display:flex;flex-direction:column;gap:32px;padding:36px 0}.profile{display:grid;grid-template-columns:100px minmax(0,1fr);column-gap:25px;align-items:start;width:100%;padding:0}.portrait{grid-row:1/6;margin:0 7px 5px 0}.portrait img{aspect-ratio:1/1.18}.portrait::before{inset:8px -7px -7px 8px}.profile-affiliation{font-size:.875rem}.profile-detail,.profile-email,.profile-links{font-size:.8125rem}.profile-links{margin-top:7px;gap:12px}.intro h1{font-size:2.8rem;margin-bottom:22px}.intro h1 small{font-size:1.25rem}.intro-copy p{font-size:.9375rem}.intro .eyebrow{margin-bottom:10px}.section{padding:32px 0}.section-top{margin-bottom:23px;gap:12px;flex-wrap:wrap}h2{font-size:1.65rem}.news-list{gap:15px}.news-list li{grid-template-columns:70px minmax(0,1fr);gap:12px;font-size:.875rem}.news-date{font-size:.75rem}.paper{grid-template-columns:1fr;gap:19px;padding:26px 0}.paper-image{max-width:340px}.paper-image img{aspect-ratio:16/9}.paper h3{font-size:1.05rem}.academic-grid{grid-template-columns:1fr;gap:35px}.academic-grid h2{margin-bottom:20px}.personal{padding:25px 22px;margin:5px 0 32px}.interests{grid-template-columns:1fr;gap:22px}.personal h2{margin-bottom:23px}.mentoring{grid-template-columns:1fr;gap:15px;padding:28px 0 32px}.profile a{overflow-wrap:anywhere}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+/* Keep image dimensions responsive and the compact profile aligned. */
+img{height:auto}.profile-email{display:block}.desktop-break{display:none}
+@media(max-width:650px){.profile{align-content:start;row-gap:3px}.portrait{grid-row:1/6}.portrait img{height:auto}}
+.intro-copy .eyebrow{font-size:.75rem}
+
+/* Seaside palette: ocean, dream blue, milk, butter yellow, mint, lavender. */
+.site-header{border-top:4px solid var(--dream)}
+.wordmark{font-family:'DM Serif Display',Georgia,serif;font-size:1.7rem;font-weight:400;letter-spacing:-.025em}
+.intro h1{font-family:'DM Serif Display',Georgia,serif;font-size:4.15rem;font-weight:400;letter-spacing:-.045em;line-height:1.05;margin-bottom:23px}
+.intro h1 small{color:var(--muted);font-size:1.35rem;vertical-align:middle;margin-left:20px}
+.intro-copy .eyebrow{font-weight:500;letter-spacing:.1em;color:var(--muted)}
+.portrait{width:180px;max-width:100%;margin-right:0;margin-bottom:22px;padding:5px;border:1px solid var(--dream);border-radius:90px 90px 9px 9px;background:#edf3f5}
+.portrait img{border-radius:84px 84px 4px 4px;aspect-ratio:1/1.12}
+.profile-affiliation{padding-top:13px;border-top:1px solid var(--line)}
+.profile-links a{color:var(--ink);border-bottom:1px solid var(--accent);padding-bottom:2px}
+.opportunity{background:var(--wash);border:0;border-radius:2px;padding:15px 18px;font-size:.875rem}
+.opportunity strong{color:var(--ink)}
+h2{letter-spacing:-.035em;font-weight:600;font-size:1.7rem}
+.section-top h2{display:flex;align-items:center;gap:14px}
+.section-top h2::before{content:'';width:22px;height:2px;background:var(--accent);flex-shrink:0}
+.section-kicker{color:var(--muted);letter-spacing:.15em;font-size:.6875rem}
+.venue{background:transparent;color:var(--teal);padding:0;border-radius:0;font-weight:600;letter-spacing:.06em}
+.paper h3 a{color:var(--ink)}
+.paper-image{border-radius:6px;border-color:var(--line)}
+.news-date{color:var(--teal)}
+.personal{border-radius:4px;padding:34px 38px;border-top:3px solid var(--dream)}
+.personal h2,.personal h3{color:var(--ink)}
+.personal .section-kicker{color:var(--link)}
+.personal .interests p{color:var(--text)}
+.interests>div+div{border-left:1px solid #c9d7dd;padding-left:26px}
+.mentoring h2{font-family:'DM Serif Display',Georgia,serif;font-size:1.75rem;font-weight:400;line-height:1.3;letter-spacing:-.015em}
+@media(max-width:900px){.intro h1{font-size:3.9rem}}
+@media(max-width:650px){.intro h1{font-size:3.65rem}.intro h1 small{font-size:1.2rem;margin-left:14px}.portrait{padding:4px;margin-right:4px;margin-bottom:0;border-radius:65px 65px 7px 7px}.portrait img{border-radius:60px 60px 3px 3px}.profile-affiliation{border-top:0;padding-top:0}.personal{padding:27px 24px}.interests>div+div{border-left:0;border-top:1px solid #c9d7dd;padding:18px 0 0}h2{font-size:1.55rem}.opportunity{padding:14px 16px}}
+
+/* Color follows the content hierarchy rather than tinting the entire page. */
+.wordmark{color:var(--ocean)}
+.intro-copy .eyebrow{color:var(--teal)}
+.intro h1 small{color:#737b9d}
+.opportunity{border-left:2px solid var(--accent)}
+.nav-links a:hover,.nav-links a[aria-current]{color:var(--link);border-color:var(--link)}
+#news .section-top h2::before{background:var(--teal)}
+#research .section-top h2::before{background:var(--link)}
+.news-list li:first-child .news-date{color:var(--teal)}
+.profile-links a{color:var(--link);border-color:var(--dream)}
+.detail-year{color:#7c672f}
+.personal h3{color:var(--ink)}
+@media(max-width:650px){.portrait{width:100px;padding:4px}.portrait img{aspect-ratio:1/1.12}.profile{column-gap:19px}.intro h1{font-size:3.35rem}}
+
+/* Broad, airy surfaces carry the reference colors; text stays dark enough to read. */
+.header-inner{min-height:72px}
+.intro h1{color:var(--ocean)}
+.intro-copy .eyebrow{color:#4d7486}
+.portrait{padding:6px;background:var(--wash)}
+.profile-affiliation{border-top:3px solid var(--accent)}
+.opportunity{background:var(--wash);border-left:4px solid var(--accent);border-radius:0 9px 9px 0}
+.nav-links a:hover,.nav-links a[aria-current]{border-color:var(--ocean)}
+#news .section-top h2::before{height:8px;width:25px;border-radius:1px;background:var(--mint)}
+#research .section-top h2::before{height:8px;width:25px;border-radius:1px;background:var(--lavender)}
+.venue{color:var(--link)}
+.personal{position:relative;background:#edf3f5;border-top:0;border-radius:6px;overflow:hidden}
+.personal::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(to right,var(--dream) 0 40%,var(--accent) 40% 65%,var(--mint) 65% 85%,var(--lavender) 85%)}
+.personal .interests>div:nth-child(2) h3{color:#517466}
+.personal .interests>div:nth-child(3) h3{color:#6f6488}
+.mentoring h2{color:var(--ocean)}
+
+@media(max-width:650px){.header-inner{min-height:64px}.nav-links{top:68px;background:#f6f6de}.profile-affiliation{border-top:0}.portrait{padding:4px}.personal{padding-top:29px}}
+
+/* The coastal painting lives in the navigation masthead. */
+.site-header{background-color:#edf3f5;background-image:linear-gradient(90deg,rgba(246,246,222,.16),rgba(253,253,248,.20) 42%,rgba(253,253,248,.34)),url('assets/coastal-oil-painting.png');background-size:cover;background-position:center 52%;border-top:0;border-bottom:1px solid #b9cbd2}
+.header-inner{min-height:82px}
+.wordmark{color:#214f6a;text-shadow:0 1px 8px #fffdf5}
+.nav-links a{color:#334e5e;font-weight:600;text-shadow:0 1px 6px #fffdf5}
+.nav-links a:hover,.nav-links a[aria-current]{color:#174d72;border-color:#41799d}
+.intro{padding-top:56px}
+@media(max-width:650px){.header-inner{min-height:68px}.site-header{background-image:linear-gradient(90deg,rgba(246,246,222,.15),rgba(253,253,248,.28)),url('assets/coastal-oil-painting.png');background-position:28% 50%}.menu-toggle{background:rgba(253,253,248,.85);border-color:#b6c7ce}.nav-links{top:68px;background:#f6f6e9}.intro{padding-top:32px}}
+
+/* Reuse different crops of the original painting as a page-wide visual motif. */
+:root{--coastal-painting:url('assets/coastal-oil-painting.png')}
+.portrait{padding:9px;border:0;background-image:var(--coastal-painting);background-size:auto 230px;background-position:16% 70%;box-shadow:0 0 0 1px #cad9d9}
+.portrait img{outline:3px solid #fdfdf8}
+.intro h1::after{content:'';display:block;width:116px;height:8px;margin-top:18px;background-image:var(--coastal-painting);background-size:240px auto;background-position:70% 71%;border-radius:2px}
+#news .section-top h2::before,#research .section-top h2::before{width:42px;height:17px;border-radius:2px;background-image:var(--coastal-painting);background-size:180px auto;background-position:70% 63%}
+#news .section-top h2::before{background-position:9% 55%}
+.opportunity{position:relative;border-left:0;padding-left:23px;overflow:hidden}
+.opportunity::before{content:'';position:absolute;inset:0 auto 0 0;width:7px;background-image:var(--coastal-painting);background-size:auto 120px;background-position:56% 60%}
+.personal{padding-top:109px;background:#eef4f4;border:1px solid #dce6e6}
+.personal::before{height:75px;background-image:var(--coastal-painting);background-size:cover;background-position:50% 58%}
+.academic-grid h2::after{content:'';display:block;margin-top:12px;width:56px;height:5px;background-image:var(--coastal-painting);background-size:160px auto;background-position:18% 50%}
+.academic-grid #service h2::after{background-position:70% 65%}
+
+
+@media(max-width:650px){.portrait{padding:6px;background-size:auto 145px}.portrait img{outline-width:2px}.intro h1::after{width:88px;height:7px;margin-top:15px}.personal{padding-top:91px}.personal::before{height:62px;background-size:auto 150px;background-position:24% 54%}#news .section-top h2::before,#research .section-top h2::before{width:30px;height:13px}}
+
+/* Refine the profile scale, simplify the portrait, and bring mentoring forward. */
+.portrait{padding:0;border:0;background:none;box-shadow:none}
+.portrait img{outline:none;border-radius:84px 84px 4px 4px}
+.intro h1{font-size:2.75rem;line-height:1.16;margin-bottom:22px;letter-spacing:-.035em}
+.intro h1 small{font-size:1.125rem;margin-left:14px;color:#6d7d89}
+.intro h1::after{width:78px;height:3px;margin-top:13px;border-radius:0;opacity:.55;background-size:210px auto;background-position:64% 64%}
+.opportunity{background:#eaf2f6;border:1px solid #d8e5ed;border-radius:5px;padding:15px 18px 15px 21px;color:#415c6b}
+.opportunity strong{color:#2e5971}
+.opportunity a{color:#356a88}
+.opportunity::before{width:4px;opacity:.55}
+.intro{padding-bottom:34px}
+.mentoring{padding:25px 0 31px;grid-template-columns:205px minmax(0,1fr);gap:68px;border-top:1px solid #dce5e7}
+.mentoring h2{font-size:1.4rem;line-height:1.35}
+.mentoring p{font-size:.9rem;color:#536770}
+
+
+@media(max-width:900px){.mentoring{grid-template-columns:185px minmax(0,1fr);gap:36px}}
+@media(max-width:650px){.portrait{padding:0}.portrait img{outline:none;border-radius:60px 60px 3px 3px}.intro h1{font-size:2.35rem}.intro h1 small{font-size:1rem;margin-left:12px}.intro h1::after{width:66px;height:3px;margin-top:11px}.mentoring{grid-template-columns:1fr;gap:12px;padding:23px 0 28px}.mentoring h2{font-size:1.35rem}.opportunity{padding:14px 16px 14px 19px}}
+
+/* End on the interests section, with an unobtrusive amount of breathing room. */
+main.wrap{padding-bottom:28px}
+@media(max-width:650px){main.wrap{padding-bottom:16px}}
+
+/* Transparent painted strokes replace the rectangular artwork crops. */
+:root{--brushstroke:url('assets/ocean-brushstroke.png')}
+#news .section-top h2::before,#research .section-top h2::before{content:none}
+.section-top h2{display:block}
+.section-top h2::after,.intro h1::after,.academic-grid h2::after{content:'';display:block;width:90px;height:14px;margin-top:8px;border-radius:0;background-color:transparent;background-image:var(--brushstroke);background-repeat:no-repeat;background-size:100% 300%;background-position:center;opacity:.78;transform:rotate(-1deg)}
+.intro h1::after{width:105px;height:12px;margin-top:10px;opacity:.65}
+#news .section-top h2::after{width:78px;transform:rotate(1deg)}
+.academic-grid h2::after,.academic-grid #service h2::after{width:70px;height:10px;background-image:var(--brushstroke);background-size:100% 300%;background-position:center;opacity:.65}
+@media(max-width:650px){.section-top h2::after{width:76px;height:12px}.intro h1::after{width:86px;height:11px}.academic-grid h2::after{width:66px}}
+
+/* Distinct brush gestures share a palette, but vary in length and silhouette. */
+.intro h1::after{width:212px;height:26px;background-image:url('assets/ocean-sweep.png');background-size:100% 155%;background-position:center;opacity:.8;margin-top:5px;transform:none}
+#research .section-top h2::after{width:225px;height:27px;background-image:url('assets/ocean-sweep.png');background-size:100% 150%;opacity:.86;transform:rotate(-1deg);margin-top:3px}
+#news .section-top h2::after{width:190px;height:32px;background-image:url('assets/tide-double.png');background-size:100% 120%;opacity:.85;transform:none;margin-top:3px}
+.academic-grid #awards h2::after{width:176px;height:27px;background-image:url('assets/sunlight-layer.png');background-size:100% 160%;opacity:.95;transform:rotate(-1deg);margin-top:4px}
+.academic-grid #service h2::after{width:193px;height:27px;background-image:url('assets/tide-double.png');background-size:100% 125%;opacity:.8;transform:scaleX(-1);margin-top:4px}
+.mentoring h2::after{content:'';display:block;width:164px;height:23px;margin-top:6px;background:url('assets/sunlight-layer.png') center / 100% 160% no-repeat;opacity:.9}
+@media(max-width:650px){.intro h1::after{width:182px;height:24px}#research .section-top h2::after{width:194px;height:25px}#news .section-top h2::after{width:172px;height:28px}.academic-grid #awards h2::after{width:160px;height:24px}.academic-grid #service h2::after{width:174px;height:26px}.mentoring h2::after{width:150px;height:22px}}
+
+/* Reveal the painting's original pigments while keeping navigation readable. */
+.site-header .nav-links{padding:3px 16px;background:rgba(253,253,248,.78);border-radius:5px}
+.wordmark{background:rgba(253,253,248,.76);padding:5px 10px;border-radius:4px;text-shadow:none}
+.site-header .nav-links a{text-shadow:none;color:#284c63}
+@media(max-width:650px){.site-header .nav-links{padding:16px 20px 20px;background:#f6f6e9;border-radius:0}.wordmark{padding:3px 8px}}
+
+/* Separate emphasis from navigation: neutral bold text, blue underlined links. */
+strong,.underline,.me{color:#303940}
+.intro-copy p a,.mentoring p a,.opportunity a,.news-copy a,.profile-email{color:#276c97;text-decoration:underline;text-decoration-color:#88b1ca;text-decoration-thickness:1px;text-underline-offset:3px}
+.intro-copy p a:hover,.mentoring p a:hover,.opportunity a:hover,.news-copy a:hover,.profile-email:hover{color:#184d73;text-decoration-color:currentColor}
+.opportunity strong{color:#303940}
+
+/* Preserve the graduation cap and the original portrait composition. */
+.portrait,.portrait img{border-radius:6px}
+.portrait img{aspect-ratio:1122/1402;object-fit:contain;object-position:center}
+
+/* Lighten the biography and make publication metadata easier to scan. */
+.intro-copy p a{font-weight:400}
+.paper h3{font-size:1.125rem;line-height:1.45;font-weight:650;letter-spacing:-.02em}
+.paper h3 a{color:#27343d}
+.paper h3 a:hover{color:var(--link)}
+.paper .venue{display:inline-flex;align-items:center;background:#e8f0f5;color:#365d75;border:1px solid #d8e5ed;border-radius:4px;padding:2px 8px;margin-bottom:9px;font-size:.75rem;font-weight:600;line-height:1.6;letter-spacing:.025em}
+.paper-authors{color:#6c757c;font-weight:400;font-size:.875rem;line-height:1.65;margin-top:8px}
+.paper-authors .me{color:#46545d;font-weight:600;text-decoration:none}
+@media(max-width:650px){.paper h3{font-size:1.0625rem}}

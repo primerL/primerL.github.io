@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#c3e2e5"><title>Bo's Research Island</title><meta name="description" content="A little island of research, music, and curiosity. Explore Bo Li's interactive 3D homepage."><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2341799d'/%3E%3Ctext x='12' y='44' font-size='34' fill='%23fff4d6'%3EB%3C/text%3E%3C/svg%3E"><link rel="stylesheet" href="island.css"></head>
+<body>
+<div id="world" role="application" aria-label="Research island. Use arrow keys or WASD to walk, E to interact, or select a location on the map." tabindex="0"></div>
+<div id="pins" aria-label="Island destinations"></div>
+<header class="topbar"><a class="back" href="../">← <span>Back to homepage</span></a><div class="brand"><span>BO LI'S</span><h1>Research Island</h1></div><button id="notebook" class="notes-button" aria-label="Open field notebook">▤ <span>Field notes</span> <b id="progress">0 / 3</b></button></header>
+<div class="welcome" id="welcome"><span class="eyebrow">A LITTLE WORLD, PAINTED BY THE SEA.</span><h2>Wander into the painting.</h2><p>Follow a path, find an idea, or play the piano by the sea. <br>Three research pages are waiting to be found.</p><button id="dismiss-welcome">Let's explore <span>→</span></button></div>
+<div id="loading" role="status">Opening the island…</div>
+<div id="toast" role="status" aria-live="polite"></div>
+<div class="bottom"><div class="guide"><span class="key">W A S D</span><span> / arrows to walk</span><span class="dot">·</span><span>Click the island to move</span></div><button id="interact" hidden><span class="key">E</span> <span id="interact-label">Explore</span></button><div class="map-tools"><button id="zoom-out" aria-label="Zoom out">−</button><button id="zoom-in" aria-label="Zoom in">+</button><button id="help" aria-label="Help and accessible destinations">?</button></div></div>
+<div class="music-controls" id="music-controls"><button id="music-toggle" aria-label="Turn on background music" aria-pressed="false">♫ <span>Music off</span></button><input id="music-volume" type="range" min="0" max="100" value="35" aria-label="Background music volume"></div>
+<div class="touch-pad" aria-label="Movement controls"><button data-dir="up" aria-label="Walk up">↑</button><button data-dir="left" aria-label="Walk left">←</button><button data-dir="down" aria-label="Walk down">↓</button><button data-dir="right" aria-label="Walk right">→</button></div>
+<dialog id="panel"><button class="close" aria-label="Close panel">×</button><div id="panel-content"></div></dialog>
+<noscript><div class="fallback">This little island needs JavaScript. <a href="../">Visit the full homepage instead.</a></div></noscript>
+<script type="module" src="island.js"></script>
+</body></html>
