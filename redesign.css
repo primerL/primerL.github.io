@@ -170,3 +170,18 @@ strong,.underline,.me{color:#303940}
 .paper-authors{color:#6c757c;font-weight:400;font-size:.875rem;line-height:1.65;margin-top:8px}
 .paper-authors .me{color:#46545d;font-weight:600;text-decoration:none}
 @media(max-width:650px){.paper h3{font-size:1.0625rem}}
+
+/* A small illustrated portal beside the name. */
+.name-row{display:flex;align-items:center;gap:17px;position:relative;width:fit-content;max-width:100%;padding-bottom:31px;margin-bottom:23px}
+.intro .name-row h1{margin:0;white-space:nowrap}
+.intro .name-row h1::after{display:none}
+.name-row::after{content:'';position:absolute;left:0;bottom:0;width:212px;height:26px;background:url('assets/ocean-sweep.png') center/100% 155% no-repeat;opacity:.8;pointer-events:none}
+.island-launch{display:inline-flex;position:relative;align-items:center;justify-content:center;flex:0 0 62px;width:62px;height:52px;border-radius:12px;text-decoration:none;transition:transform .2s,background .2s}
+.island-launch svg{display:block;width:62px;height:48px;transition:transform .2s;filter:drop-shadow(0 2px 1px #345c6810)}
+.island-launch:hover,.island-launch:focus-visible{background:#e9f2ed}
+.island-launch:hover svg,.island-launch:focus-visible svg{transform:translateY(-2px) rotate(-3deg)}
+.island-launch:focus-visible{outline:2px solid #41799d;outline-offset:4px}
+.island-tooltip{position:absolute;bottom:calc(100% + 8px);left:50%;transform:translate(-50%,4px);padding:6px 10px;border:1px solid #dce7df;border-radius:5px;background:#fffdf3;color:#365c70;box-shadow:0 3px 12px #365c7012;font:500 11px/1.4 Inter,system-ui,sans-serif;letter-spacing:0;white-space:nowrap;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .2s,transform .2s}
+.island-launch:hover .island-tooltip,.island-launch:focus-visible .island-tooltip{opacity:1;visibility:visible;transform:translate(-50%,0)}
+@media(max-width:650px){.name-row{gap:13px;padding-bottom:29px;margin-bottom:22px}.name-row::after{width:182px;height:24px}.island-launch{width:54px;height:48px;flex-basis:54px}.island-launch svg{width:54px;height:43px}.island-tooltip{left:auto;right:0;transform:translateY(4px)}.island-launch:hover .island-tooltip,.island-launch:focus-visible .island-tooltip{transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){.island-launch,.island-launch svg,.island-tooltip{transition:none}.island-launch:hover svg,.island-launch:focus-visible svg{transform:none}}
